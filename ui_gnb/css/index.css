@@ -1,0 +1,317 @@
+@import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@font-face {
+  font-family: "Kakao-Lt";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/Kakao-Lt.eot");
+  src: url("/fonts/Kakao-Lt.eot?#iefix") format("embedded-opentype"), url("/fonts/Kakao-Lt.woff") format("woff"), url("/fonts/Kakao-Lt.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Kakao-Rg";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Kakao-Rg.eot");
+  src: url("/fonts/Kakao-Rg.eot?#iefix") format("embedded-opentype"), url("/fonts/Kakao-Rg.woff") format("woff"), url("/fonts/Kakao-Rg.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Kakao-Bd";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/Kakao-Bd.eot");
+  src: url("/fonts/Kakao-Bd.eot?#iefix") format("embedded-opentype"), url("/fonts/Kakao-Bd.woff") format("woff"), url("/fonts/Kakao-Bd.woff2") format("woff2");
+}
+
+.cp_menu {
+  overflow-x: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #fff;
+  padding: 10px 10px 0;
+  border-bottom: 1px solid #cccccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.cp_menu .cp_item {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: auto;
+  text-align: center;
+  background: rgba(255, 220, 0, 0.25);
+  font-size: 16px;
+  color: #666666;
+  border-radius: 7px;
+  -webkit-box-shadow: 0 7px 0px #FFE500;
+          box-shadow: 0 7px 0px #FFE500;
+  display: inline-block;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  position: relative;
+  top: 0;
+  cursor: pointer;
+  margin: 0 10px 17px 0;
+}
+
+.cp_menu .cp_item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 16px 22px;
+}
+
+.cp_menu .cp_item:hover {
+  font-weight: bold;
+  color: #000000;
+}
+
+.cp_menu .cp_item:active {
+  top: 3px;
+  -webkit-box-shadow: 0 2px 0px #FFE500;
+          box-shadow: 0 2px 0px #FFE500;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.cp_menu.fixed {
+  position: fixed;
+}
+
+.contents {
+  position: relative;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+}
+
+.contents .container {
+  position: relative;
+  width: 100%;
+}
+
+.contents .container h3 {
+  margin: 50px 0 10px;
+}
+
+.contents .component-box {
+  position: relative;
+}
+
+.contents .component-box > div {
+  margin-bottom: 17px;
+}
+
+.tab-menu-wrap {
+  position: relative;
+  width: 100%;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  background: #ffffff;
+}
+
+.tab-menu-wrap .scrolling-tab-area {
+  overflow-x: scroll;
+  position: relative;
+  width: 100%;
+}
+
+.tab-menu-wrap .scrolling-tab-area .tab {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: normal;
+  padding: 0;
+}
+
+.tab-menu-wrap .scrolling-tab-area .tab .tab-item {
+  position: relative;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin: 10px 13px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.tab-menu-wrap .scrolling-tab-area .tab .tab-item span {
+  display: block;
+  font-size: 15px;
+}
+
+.tab-menu-wrap .scrolling-tab-area .tab .tab-item:after {
+  display: none;
+}
+
+.tab-menu-wrap .scrolling-tab-area .tab .tab-item.active_tab:after {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  display: block;
+  clear: both;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #000000;
+}
+
+.tab-menu-wrap .scrolling-tab-area::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-menu-wrap.type2 {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+.tab-menu-wrap.type2 .scrolling-tab-area .tab {
+  width: 100%;
+}
+
+.tab-menu-wrap.type2 .scrolling-tab-area .tab .tab-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin: 10px 0;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.chip-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chip-wrap .chip {
+  font-size: 15px;
+  font-family: "Kakao-Rg";
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: -0.5px;
+  background: #F2F2F2;
+  border: 1px solid #E5E5E5;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #00000099;
+  padding: 4px 6px;
+}
+
+.chip-wrap .chip.green {
+  background: #05AA33;
+  border: 1px solid #0B9230;
+  border-radius: 0;
+  color: #FFFFFF;
+}
+
+.chip-wrap .chip.grey {
+  background: #5D5F66;
+  border: 1px solid #525252;
+  border-radius: 0;
+  color: #FFFFFF;
+}
+
+.gb-btn-wrap {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.gb-btn-wrap > button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 60px;
+  font-size: 18px;
+  font-family: "Kakao-Rg";
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.gb-btn-wrap .btn-primary-yellow {
+  background: #FFE500;
+}
+
+.gb-btn-wrap .btn-primary-yellow.disabled {
+  color: #0000004d;
+}
+
+.gb-btn-wrap .btn-primary-grey {
+  background: #5D5F66;
+  color: #FFFFFF;
+}
+
+.switch-btn {
+  margin-left: auto;
+}
+
+.switch-btn input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.switch-btn label {
+  position: relative;
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 50px;
+  height: 28px;
+  background: #474747;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: block;
+  border-radius: 20px;
+}
+
+.switch-btn label:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  background: #ffffff;
+  border-radius: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.switch-btn input:checked + label {
+  background: #ffdc00;
+}
+
+.switch-btn input:checked + label:after {
+  left: calc(100% - 3px);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.switch-btn label:active:after {
+  width: 30px;
+}

@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+// important
+$imt : unquote('!important');
+
+// item length
+$itemLength : 200;
+
+// primary
+$color-primary-yellow: #FFE500; 
+$color-primary-green: #05AA33; 
+$color-primary-blue: #1F8BD5; 
+$color-primary-black: #000000;
+$color-primary-grey: #5D5F66;
+
+// text
+$color-text-dark-black: #000000;
+$color-text-medium-black: #666666;
+$color-text-light-black: #999999;
+
+
+$color-white: #FFFFFF;
+$color-card: #EEEFF0; // 컨텐츠 카드 간격
+$color-filter: #F6F7F7; // 필터영역
+$color-disabled: #F2F2F2; // 비활성화버튼
+
+$colors: () !default;
+$colors: map-merge(
+    (
+      "primary-yellow":       $color-primary-yellow,
+      "primary-green":     $color-primary-green,
+      "primary-blue":     $color-primary-blue,
+      "primary-black":     $color-primary-black,
+      "text-dark-black":     $color-text-dark-black,
+      "text-medium-black":     $color-text-medium-black,
+      "text-light-black":     $color-text-light-black,
+      "white":     $color-white,
+      "card":     $color-card,
+      "filter":     $color-filter,
+      "disabled": $color-disabled
+    ),
+    $colors
+);

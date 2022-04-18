@@ -1,0 +1,243 @@
+.btn-share {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background: #2e2e2e;
+  color: #FFFFFF;
+  font-size: 14px;
+  padding: 16px 20px;
+  border-radius: 8px;
+}
+
+.btn-share p {
+  margin-left: 13px;
+}
+
+.alert-pop-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 17px;
+}
+
+.alert-pop-btns a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  height: 50px;
+  margin-top: 0;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: "Kakao-Rg";
+  letter-spacing: -0.5px;
+  background: #FFE500;
+}
+
+.alert-pop-btns a:first-child {
+  margin-right: 10px;
+}
+
+.alert-pop-btns a.alert-pop-notallow {
+  background-color: #5D5F66;
+  color: #FFFFFF;
+}
+
+.bottom-fixed-btn {
+  position: relative;
+}
+
+.bottom-fixed-btn .bottom-btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 60px;
+  font-size: 18px;
+  line-height: 60px;
+  text-align: center;
+  font-family: "Kakao-Rg";
+  letter-spacing: -0.5px;
+  background: #FFE500;
+}
+
+.btn-yellow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  font-size: 17px;
+  font-weight: bold;
+  background: #FFE500;
+  padding: 20px 0;
+  border-radius: 10px;
+}
+
+.btn-green-round {
+  height: 30px;
+  background: #05AA33;
+  color: #FFFFFF;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+.btn-bd-grey {
+  background: #F2F2F2;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+
+.terms-chk-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Spoqa HanSans Neo", "sans-serif";
+  padding: 0 20px;
+  background-size: 20px 20px;
+}
+
+.terms-chk-box .terms-chk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 20px;
+  padding-right: 10px;
+  font-size: 0;
+  background: url("https://images.kakao.golf/web/images/locker/selfcheckin/chk-ico-off.png") no-repeat;
+  background-size: 20px 20px;
+}
+
+.terms-chk-box .terms-chk .form-agree {
+  font-size: 14px;
+  line-height: 24px;
+  margin-left: 27px;
+}
+
+.terms-chk-box .terms-chk.chk-active {
+  background-image: url("https://images.kakao.golf/web/images/locker/selfcheckin/chk-ico-on.png");
+}
+
+.terms-chk-box .check-text {
+  font-size: 11px;
+  line-height: 11px;
+  text-align: left;
+  letter-spacing: -0.5px;
+  color: #777777;
+  margin-top: 8px;
+}
+
+.terms-chk-box .input-chk {
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  z-index: 10;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  border: 0;
+  cursor: pointer;
+}
+
+.terms-chk-box .input-chk-label {
+  margin-left: 25px;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.toast {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 100%;
+  height: 46px;
+  background: rgba(46, 46, 46, 0.5);
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: -0.3px;
+  color: #FFFFFF;
+  border-radius: 8px;
+  padding: 0 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.toast.type-btn {
+  background: #2E2E2E;
+  font-family: "Kakao-Rg";
+}
+
+.toast.type-btn i {
+  margin-right: 13px;
+}
+
+.toast.shape-round {
+  width: 70%;
+  height: 60px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Kakao-Rg";
+  background: #FFFFFF;
+  color: #000000;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 100px;
+}
+
+.toast.shape-round strong {
+  display: block;
+  color: #05AA33;
+  font-family: "Kakao-Bd";
+  letter-spacing: -0.5px;
+  margin-top: 4px;
+}
+
+.toast.shape-round.type-black {
+  color: #FFFFFF;
+  background: #444B52;
+}
