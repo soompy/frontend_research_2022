@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤효과 페이지 구현 - 춘식이 덕후를 위한 페이지</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/horizontalScroll.css">
+    <link rel="stylesheet" href="./css/animate.css">
+</head>
+<style>
+     /* body {
+        overflow-x: hidden;
+    }
+    @media screen and (max-width: 760px) {
+        html {
+            overflow-x: hidden;
+        }   
+    } */
+</style>
+<body>
+    <headeer id="header">
+
+    </headeer>
+    
+    <section class="wrap">
+        <section class="box"></section>
+        
+        <section class="box"></section>
+
+        <section class="box">
+            <section class="horizontal-scroll">
+                <div class="horizontal-scroll-fix-wrap">
+                    <div class="horizontal-scroll-fix-box">
+                        <div class="service">
+                            <div class="inner">
+                                <div class="title-box" style="position: sticky; top: 0;">
+                                    <p class="wow fadeInUp content-sub-title">
+                                        서비스 소개
+                                    </p>
+                                    <h3 class="wow fadeInUp contents-top-title">
+                                        다양한 플랫폼을 통해 <br />
+                                        리얼하고 즐거운 경험을 연구합니다.
+                                    </h3>
+                                </div>               
+                            </div>  
+                        </div>
+        
+                        <div class="scroll-area">
+                            <div>
+                                <article class="business-card-box">
+                                    <div class="business-card-inner">
+                                        <a href="/service/screen" class="link-overlay"></a>
+                                        <h2 class="business-title">스크린 골프</h2>
+                                        <h3 class="business-sub-title">누구나 쉽고 즐겁게 골프를 즐기고, 함께 플레이하는 문화를 만드는 것. 그것이 카카오 VX가 프렌즈 스크린, 프렌즈 아카데미를 서비스하는 이유입니다.</h3>
+                                        <span class="link-box right">
+                                            <div class="icon-box">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 242.133 242.133"
+                                                    style="enable-background: new 0 0 242.133 242.133" xml:space="preserve">
+                                                    <path id="XMLID_24_"
+                                                        d="M190.919,212.133h-69.853c-8.284,0-15,6.716-15,15s6.716,15,15,15h106.065c8.284,0,15-6.716,15-15V121.066
+                                                                                                                                                                                                                    c0-8.284-6.716-15-15-15s-15,6.716-15,15v69.854L25.607,4.394c-5.858-5.858-15.356-5.858-21.213,0
+                                                                                                                                                                                                                    c-5.858,5.858-5.858,15.356,0,21.213L190.919,212.133z"
+                                                        fill="#1A1A1A" />
+                                                </svg>
+                                            </div>
+                                        </span>
+                                        <div class="business-item-image">
+                                            <img src="../images/business/biz_screen.png" alt="서비스스크린" />
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div>
+                                <article class="business-card-box">
+                                    <div class="business-card-inner">
+                                        <a href="/service/goods" class="link-overlay"></a>
+                                        <h2 class="business-title">골프용품</h2>
+                                        <h3 class="business-sub-title">전국민의 캐릭터 '카카오프렌즈' IP를 활용한 위트있고 감각적인 골프용품을 선보이며 새로운 경험과 즐거움을 제공합니다.</h3>
+                                        <span class="link-box right">
+                                            <div class="icon-box">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 242.133 242.133"
+                                                    style="enable-background: new 0 0 242.133 242.133" xml:space="preserve">
+                                                    <path id="XMLID_24_"
+                                                        d="M190.919,212.133h-69.853c-8.284,0-15,6.716-15,15s6.716,15,15,15h106.065c8.284,0,15-6.716,15-15V121.066
+                                                                                                                                                                                                                                            c0-8.284-6.716-15-15-15s-15,6.716-15,15v69.854L25.607,4.394c-5.858-5.858-15.356-5.858-21.213,0
+                                                                                                                                                                                                                                            c-5.858,5.858-5.858,15.356,0,21.213L190.919,212.133z"
+                                                        fill="#1A1A1A" />
+                                                </svg>
+                                            </div>
+                                        </span>
+                                        <div class="business-item-image">
+                                            <img src="../images/business/biz_goods.png" alt="서비스골프용품" />
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div>
+                                <article class="business-card-box">
+                                    <div class="business-card-inner">
+                                        <a href="" class="link-overlay"></a>
+                                        <h2 class="business-title">헬스케어</h2>
+                                        <h3 class="business-sub-title">운동과 함께하는 건강한 생활. 다채로운 삶을 영위할 단 하나의 스마트한 선택. AI 코칭, 개인 맞춤화 기술과 사람을 연결하는 것이 카카오 VX의 헬스케어 서비스 입니다.
+                </h3>
+                                        <span class="link-box right">
+                                            <div class="icon-box">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 242.133 242.133"
+                                                    style="enable-background: new 0 0 242.133 242.133" xml:space="preserve">
+                                                    <path id="XMLID_24_"
+                                                        d="M190.919,212.133h-69.853c-8.284,0-15,6.716-15,15s6.716,15,15,15h106.065c8.284,0,15-6.716,15-15V121.066
+                                                                                                                                                                                                                                            c0-8.284-6.716-15-15-15s-15,6.716-15,15v69.854L25.607,4.394c-5.858-5.858-15.356-5.858-21.213,0
+                                                                                                                                                                                                                                            c-5.858,5.858-5.858,15.356,0,21.213L190.919,212.133z"
+                                                        fill="#1A1A1A" />
+                                                </svg>
+                                            </div>
+                                        </span>
+                                        <div class="business-item-image">
+                                            <img src="../images/business/biz_homet.png" alt="서비스헬스케어" />
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div>
+                                <article class="business-card-box">
+                                    <div class="business-card-inner">
+                                        <a href="/service/booking" class="link-overlay"></a>
+                                        <h2 class="business-title">골프예약</h2>
+                                        <h3 class="business-sub-title">카카오골프예약이 보다 더 쉽고 편리한 골프 예약을 경험할 수 있도록 만들어 드립니다.</h3>
+                                        <span class="link-box right">
+                                            <div class="icon-box">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 242.133 242.133"
+                                                    style="enable-background: new 0 0 242.133 242.133" xml:space="preserve">
+                                                    <path id="XMLID_24_"
+                                                        d="M190.919,212.133h-69.853c-8.284,0-15,6.716-15,15s6.716,15,15,15h106.065c8.284,0,15-6.716,15-15V121.066
+                                                                                                                                                                                                                                            c0-8.284-6.716-15-15-15s-15,6.716-15,15v69.854L25.607,4.394c-5.858-5.858-15.356-5.858-21.213,0
+                                                                                                                                                                                                                                            c-5.858,5.858-5.858,15.356,0,21.213L190.919,212.133z"
+                                                        fill="#1A1A1A" />
+                                                </svg>
+                                            </div>
+                                        </span>
+                                        <div class="business-item-image">
+                                            <img src="../images/business/biz_booking.png" alt="서비스골프예약" />
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div>
+                                <article class="business-card-box">
+                                    <div class="business-card-inner">
+                                        <a href="/service/smartgolf" class="link-overlay"></a>
+                                        <h2 class="business-title">스마트 골프장</h2>
+                                        <h3 class="business-sub-title">쉽고 편하게 체크인 하고, 라운드 종료 후 체크아웃까지. 골프라운드가 더욱더 쉬워 집니다.</h3>
+                                        <span class="link-box right">
+                                            <div class="icon-box">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 242.133 242.133"
+                                                    style="enable-background: new 0 0 242.133 242.133" xml:space="preserve">
+                                                    <path id="XMLID_24_"
+                                                        d="M190.919,212.133h-69.853c-8.284,0-15,6.716-15,15s6.716,15,15,15h106.065c8.284,0,15-6.716,15-15V121.066
+                                                                                                                                                                                                                                            c0-8.284-6.716-15-15-15s-15,6.716-15,15v69.854L25.607,4.394c-5.858-5.858-15.356-5.858-21.213,0
+                                                                                                                                                                                                                                            c-5.858,5.858-5.858,15.356,0,21.213L190.919,212.133z"
+                                                        fill="#1A1A1A" />
+                                                </svg>
+                                            </div>
+                                        </span>
+                                        <div class="business-item-image">
+                                            <img src="../images/business/biz_smartgolf.png" alt="서비스스마트 골프장" />
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div>
+                                <article class="business-card-box">
+                                    <div class="business-card-inner">
+                                        <a href="/service/contract" class="link-overlay"></a>
+                                        <h2 class="business-title">골프장 운영대행</h2>
+                                        <h3 class="business-sub-title">골프장의 가치를 한층 더하는 '프리미엄 골프장'과 '디지털 골프 혁신'을 가속화하는 새로운 골프장 문화를 만날 수 있습니다.</h3>
+                                        <span class="link-box right">
+                                            <div class="icon-box">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 242.133 242.133"
+                                                    style="enable-background: new 0 0 242.133 242.133" xml:space="preserve">
+                                                    <path id="XMLID_24_"
+                                                        d="M190.919,212.133h-69.853c-8.284,0-15,6.716-15,15s6.716,15,15,15h106.065c8.284,0,15-6.716,15-15V121.066
+                                                                                                                                                                                                                                            c0-8.284-6.716-15-15-15s-15,6.716-15,15v69.854L25.607,4.394c-5.858-5.858-15.356-5.858-21.213,0
+                                                                                                                                                                                                                                            c-5.858,5.858-5.858,15.356,0,21.213L190.919,212.133z"
+                                                        fill="#1A1A1A" />
+                                                </svg>
+                                            </div>
+                                        </span>
+                                        <div class="business-item-image">
+                                            <img src="../images/business/biz_contract.png" alt="서비스 골프장 운영대행" />
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div>
+                                <article class="business-card-box">
+                                    <div class="business-card-inner">
+                                        <a href="/service/vr" class="link-overlay"></a>
+                                        <h2 class="business-title">VR</h2>
+                                        <h3 class="business-sub-title">메타버스 속에서 아바타의 모습으로 사람과 사람을 연결하고, 가상 공간에서도 현실을 체험할 수 있는 경험을 제공합니다.</h3>
+                                        <span class="link-box right">
+                                            <div class="icon-box">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 242.133 242.133"
+                                                    style="enable-background: new 0 0 242.133 242.133" xml:space="preserve">
+                                                    <path id="XMLID_24_"
+                                                        d="M190.919,212.133h-69.853c-8.284,0-15,6.716-15,15s6.716,15,15,15h106.065c8.284,0,15-6.716,15-15V121.066
+                                                                                                                                                                                                                                            c0-8.284-6.716-15-15-15s-15,6.716-15,15v69.854L25.607,4.394c-5.858-5.858-15.356-5.858-21.213,0
+                                                                                                                                                                                                                                            c-5.858,5.858-5.858,15.356,0,21.213L190.919,212.133z"
+                                                        fill="#1A1A1A" />
+                                                </svg>
+                                            </div>
+                                        </span>
+                                        <div class="business-item-image">
+                                            <img src="../images/business/biz_vr.png" alt="서비스VR" />
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+        </section>
+        
+        <section class="box"></section>
+
+        <section class="box"></section>
+
+        <section class="box"></section>
+    </section>
+    
+    
+    
+
+    <script src="js/wow.min.js"></script>
+    <script src="js/horizontal.js"></script>
+    
+    <!-- <script>
+        const scrollElement = document.querySelector('body')
+        const scrollTarget = document.querySelector('.horizontal-scroll')
+        const scrollHorizontalTarget = document.querySelector('.horizontal-scroll-fix-box')
+        const scrollTargetMinPostion = scrollTarget.offsetTop
+        const scrollTargetMaxPostion = scrollTarget.nextElementSibling.offsetTop
+        console.log('scrollTargetMinPostion::', scrollTargetMinPostion)
+        console.log('scrollTargetMaxPostion::', scrollTargetMaxPostion)
+        scrollElement.addEventListener('scroll', e => {
+            // console.log(e.target.scrollTop)
+            if (e.target.scrollTop >= scrollTargetMinPostion && e.target.scrollTop <= scrollTargetMaxPostion) {
+                console.log('on >>', e.target.scrollTop)
+                // 밑에 값이 일치 하는것을 볼수 있다. 
+                console.log('on >>', e.target.scrollTop - scrollTargetMinPostion, scrollTarget.clientHeight)
+                scrollHorizontalTarget.scrollLeft = e.target.scrollTop - scrollTargetMinPostion
+            }
+        }, false)
+    </script> -->
+</body>
+</html>

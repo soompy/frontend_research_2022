@@ -1,0 +1,153 @@
+@charset "UTF-8";
+html {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.box {
+  width: 100vw;
+  height: calc(100vw / 2);
+  border: 1px solid red;
+}
+
+.horizontal-scroll {
+  /* hidden 을 하면 stiky 가 동작하지 않는다.  */
+  /* overflow: hidden; */
+  height: calc(20vw * 10);
+}
+
+.horizontal-scroll-fix-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: calc(50% - (150px / 2));
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.horizontal-scroll-fix-box div {
+  border: 1px solid blue;
+  /* fiex 인경우는 min-width */
+  min-width: 20vw;
+  height: 150px;
+}
+
+.service {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 1520px;
+  margin: 0 auto 80px;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.service .inner {
+  width: 100%;
+  margin: 0 !important;
+}
+
+.service .title-box .content-sub-title {
+  font-size: 22px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.service .title-box .contents-top-title {
+  font-size: 48px;
+  line-height: 68px;
+  letter-spacing: -0.03em;
+  font-weight: bold;
+}
+
+.service.bgGrey {
+  background: #f5f6f9;
+}
+
+.horizontal-scroll .horizontal-scroll-fix-wrap {
+  position: relative;
+  top: 0;
+  width: 1520px;
+  height: 2500px;
+  margin: auto;
+}
+
+.horizontal-scroll .horizontal-scroll-fix-wrap .horizontal-scroll-fix-box {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  margin-right: -20vw;
+  margin-left: -20vw;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  padding-top: 160px;
+  padding-bottom: 135px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.horizontal-scroll .horizontal-scroll-fix-wrap .horizontal-scroll-fix-box .scroll-area {
+  overflow: hidden !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow: auto;
+  margin-right: -20vw;
+  margin-left: -20vw;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.horizontal-scroll .horizontal-scroll-fix-wrap .horizontal-scroll-fix-box .scroll-area::-webkit-scrollbar {
+  display: none;
+}
+
+.horizontal-scroll .horizontal-scroll-fix-wrap .horizontal-scroll-fix-box .scroll-area > div:last-child .business-card-box {
+  margin-right: 0;
+}
+
+.horizontal-scroll .horizontal-scroll-fix-wrap .horizontal-scroll-fix-box .business-card-box {
+  margin-right: 28px;
+}
+
+.horizontal-scroll .horizontal-scroll-fix-wrap .horizontal-scroll-fix-box.bgGrey {
+  background: #f5f6f9;
+}
+
+.horizontal-scroll.bgGrey {
+  background: #f5f6f9;
+}

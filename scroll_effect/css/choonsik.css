@@ -1,0 +1,97 @@
+body {
+  cursor: url("https://blog.kakaocdn.net/dn/BQXpN/btq3qNR67Lg/8tx8tGzkOcr5BuX5dyIaKk/img.png"), auto;
+  background: #f8d079;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f8d079), color-stop(49%, #ffd085), to(#fe987b));
+  background: linear-gradient(180deg, #f8d079 0%, #ffd085 49%, #fe987b 100%);
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  padding: 50px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container[data-scroll] {
+  opacity: 0;
+  will-change: transform, scale, opacity;
+  -webkit-transform: translateY(6rem) scale(0.93);
+          transform: translateY(6rem) scale(0.93);
+  -webkit-transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.container[data-scroll='in'] {
+  opacity: 1;
+  -webkit-transform: translateY(0) scale(1);
+          transform: translateY(0) scale(1);
+}
+
+.container[data-scroll='out'] {
+  opacity: 0;
+}
+
+.container .inner {
+  width: 1400px;
+  margin: auto;
+}
+
+.wave-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.parallex-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin: 40px 0;
+}
+
+.parallex-box .rellax {
+  width: 25%;
+}
+
+.parallex-box .rellax img {
+  display: block;
+  width: 100%;
+}
+
+.ml6 {
+  position: relative;
+  font-weight: 900;
+  font-size: 3.3em;
+}
+
+.ml6 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml6 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
