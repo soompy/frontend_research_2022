@@ -1,0 +1,183 @@
+
+// Ripple
+[ripple] {
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+
+  .ripple {
+    position: absolute;
+    background: #ffffff;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    animation: ripple 1.6s;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: scale(40);
+    opacity: 0;
+  }
+}
+
+@keyframes materialRipple {
+  0% {
+      transform: translate(-50%, -50%) scale(1)
+  }
+
+  100% {
+      transform: translate(-50%, -50%) scale(var(--material-scale));
+      opacity: 0
+  }
+}
+
+.tabs {
+  z-index: 15px;
+  position: relative;
+  background: #ffffff;
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 0 30px rgba(#1a1a1a, 0.1);
+  box-sizing: border-box;
+  margin: 100px auto 10px;
+  overflow: hidden;
+
+  // Tabs Header
+  &-header {
+    position: relative;
+    background: #18C44D;
+    overflow: hidden;
+
+    // Border
+    .border {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: #ffd633;
+      width: auto;
+      height: 2px;
+      transition: 0.3s ease;
+    }
+
+    // List
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: calc(100% - 68px);
+    }
+
+    // List Item
+    li {
+      transition: 0.3s ease;
+    }
+
+    // Anchor
+    a {
+      z-index: 1;
+      display: block;
+      box-sizing: border-box;
+      padding: 15px 20px;
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+
+  // Tabs Nav
+  &-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #18C44D;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px;
+    color: #ffffff;
+    user-select: none;
+
+    // Fade
+    &:before {
+      content: '';
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      box-shadow: 0 0 20px 10px #18C44D;
+    }
+
+    // Arrows
+    i {
+      border-radius: 100%;
+      cursor: pointer;
+    }
+  }
+
+  // Tabs Content
+  &-content {
+    position: relative;
+    padding: 15px 20px;
+    transition: 0.3s ease;
+    overflow: hidden;
+
+    // Blurred Text Effect
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 1px;
+      box-shadow: 0 0 20px 10px #ffffff;
+    }
+
+    // Tab
+    .tab {
+      display: none;
+
+      // Active
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
+
+// Pen Footer
+.pen-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 20px auto 100px;
+
+  a {
+    color: #ffffff;
+    font-size: 12px;
+    text-decoration: none;
+    text-shadow: 1px 2px 0 rgba(#1a1a1a, .1);
+    
+    .material-icons {
+      width: 12px;
+      margin: 0 5px;
+      vertical-align: middle;
+      font-size: 12px;
+    }
+  }
+}
+
+.cp-fab {
+  background: #ffffff !important;
+  color: #18C44D !important;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/layouts.css">
+    <link rel="stylesheet" href="./css/accordion.css">
+    <link rel="stylesheet" href="./css/icon.css">
+    <title>아코디언 UI</title>
+</head>
+<body>
+    <div class="wrapper">
+        <section class="container mb-40">
+            <h2 class="fz-18">아코티언 형태1 js</h2>
+            <p class="fz-16">처음상태: 모두 닫힘, 다른거 열면 기존에 열었던거 닫힘</p>
+            <div class="accordion-type1">
+                <div class="accordion-box"> 
+                    <!-- 아이템 영역 -->
+                    <div class="accordion-item">
+                        <h3 class="accordion-head">head <i class="icon ic_arrow_right grey wh-20"></i></h3>
+                        <div class="accordion-content">
+                            아코디언 콘텐츠
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-head">head <i class="icon ic_arrow_right grey wh-20"></i></h3>
+                        <div class="accordion-content">
+                            아코디언 콘텐츠
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mb-40">
+            <h2 class="fz-18">아코티언 형태2 js</h2>
+            <p class="fz-16">처음상태: 특정 아코디언 열려있음, 다른거 열면 기존에 열었던거 닫힘</p>
+            <div class="accordion-type2">
+                <div class="accordion-box"> 
+                    <!-- 아이템 영역 -->
+                    <div class="accordion-item">
+                        <h3 class="accordion-head">head <i class="icon ic_arrow_right grey wh-20"></i></h3>
+                        <div class="accordion-content">
+                            아코디언 콘텐츠
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-head">head <i class="icon ic_arrow_right grey wh-20"></i></h3>
+                        <div class="accordion-content">
+                            아코디언 콘텐츠
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mb-40">
+            <h2 class="fz-18">아코티언 형태3 pure css</h2>
+            <p class="fz-16">처음상태: 모두 닫힘, 열고 닫음이 수동</p>
+            <div class="accordion-type3">
+                <label for="chk-1">
+                <input id="chk-1" type="checkbox" checked/>
+                 <div class="accordion-head">
+                     <h3>Accordion Heading One</h3>
+                 </div>
+                  <div class="accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit delectus sapiente dicta eligendi quis minus nulla maxime illo reiciendis corporis repudiandae excepturi? Velit molestiae reprehenderit eligendi neque repellendus! Illum molestiae quam iusto doloribus culpa sint similique quaerat libero! Molestiae facilis quidem explicabo totam nostrum in voluptatum ipsam sequi officia error id rerum unde nisi neque!</p>
+                  </div>
+                </label>
+                
+                <label for="chk-2">
+                <input id="chk-2" type="checkbox" />
+                <div class="accordion-head">
+                     <h3>Accordion Heading Two</h3>
+                 </div>
+                  
+                  <div class="accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit delectus sapiente dicta eligendi quis minus nulla maxime illo reiciendis corporis repudiandae excepturi? Velit molestiae reprehenderit eligendi neque repellendus! Illum molestiae quam iusto doloribus culpa sint similique quaerat libero! Molestiae facilis quidem explicabo totam nostrum in voluptatum ipsam sequi officia error id rerum unde nisi neque!</p>
+                  </div>
+                </label>
+                
+                <label for="chk-3">
+                <input id="chk-3" type="checkbox" />
+                <div class="accordion-head">
+                     <h3>Accordion Heading Three</h3>
+                 </div>
+                  <div class="accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit delectus sapiente dicta eligendi quis minus nulla maxime illo reiciendis corporis repudiandae excepturi? Velit molestiae reprehenderit eligendi neque repellendus! Illum molestiae quam iusto doloribus culpa sint similique quaerat libero! Molestiae facilis quidem explicabo totam nostrum in voluptatum ipsam sequi officia error id rerum unde nisi neque!</p>
+                  </div>
+                </label>
+            </div>
+        </section>
+    </div>
+    
+    <script src="./js/accordion.js"></script>
+</body>
+</html>
