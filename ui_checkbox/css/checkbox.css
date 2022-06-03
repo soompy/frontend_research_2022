@@ -1,0 +1,180 @@
+.companion-area-wrap {
+  padding-left: 30px;
+}
+
+.companion-area-wrap .info-box {
+  font-size: 14px;
+  color: #777777;
+  margin-top: 11px;
+}
+
+.reservation-list.route-52 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: 0;
+  padding: 16px 0 20px;
+}
+
+.reservation-list.route-52 .companion-box {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.reservation-list.route-52 .companion-box:first-child {
+  margin-left: 0;
+}
+
+.reservation-list.route-52 .companion-box .leader {
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 24px;
+  height: 16px;
+  background: url("../img/self/crown.png") center center no-repeat;
+  background-size: 24px 16px;
+  z-index: 1;
+}
+
+.reservation-list.route-52 .companion-box.rank .rank-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 80%;
+  height: 18px;
+  z-index: 5;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 11px;
+  border-radius: 6px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.reservation-list.route-52 .companion-box.rank .rank-box.before-pay {
+  background: rgba(230, 95, 62, 0.66);
+}
+
+.reservation-list.route-52 .companion-box.rank .rank-box.checkin {
+  background: rgba(5, 170, 51, 0.66);
+}
+
+.reservation-list.route-52 .companion-box.rank .rank-box.before-checkin {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.reservation-list.route-52 .reservation-list_picture {
+  display: block;
+  position: relative;
+  width: 61px;
+  height: 61px;
+}
+
+.reservation-list.route-52 .reservation-list_picture.reservation_add .btn-reservation {
+  background: url("https://images.kakao.golf/web/images/locker/selfcheckin/self/btn-reservation_add.png") 0 0 no-repeat;
+}
+
+.reservation-list.route-52 .reservation-list_picture.reservation_del .btn-reservation {
+  background: url("https://images.kakao.golf/web/images/locker/selfcheckin/self/btn-reservation_del.png") 0 0 no-repeat;
+}
+
+.reservation-list.route-52 .reservation-list_picture.reservation_payment .btn-reservation {
+  background: url("../img/self/img_nonpay_member2.png") 0 0 no-repeat;
+}
+
+.reservation-list.route-52 .reservation-list_picture .btn-reservation {
+  position: absolute;
+  top: -3px;
+  right: -5px;
+  width: 24px;
+  height: 24px;
+  font-size: 0;
+  z-index: 1;
+}
+
+.reservation-list.route-52 .reservation-list_picture_t {
+  overflow: hidden;
+  display: block;
+  border-radius: 22px;
+  width: 100%;
+  height: 100%;
+}
+
+.reservation-list.route-52 .reservation-list_picture_t img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.reservation-list.route-52 .reservation-list_name {
+  width: 100%;
+  height: 14px;
+  margin-top: 11px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.reservation-list.route-52 .reservation-ico_my {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("https://images.kakao.golf/web/images/locker/selfcheckin/self/ico_na.png") 0 0 no-repeat;
+  margin-left: 3px;
+  vertical-align: middle;
+  font-size: 0;
+}
+
+.reservation-list.pay-companion {
+  padding: 30px 0 20px;
+}
+
+.reservation-list.pay-companion .reservation-list_picture.on:after, .reservation-list.pay-companion .reservation-list_picture_t.on:after {
+  display: block;
+  clear: both;
+  content: '';
+  width: 94%;
+  height: 94%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 2px solid #E5CE00 !important;
+  border-radius: 22px;
+}
+
+.reservation-list.pay-companion .reservation-list_picture .county-badge {
+  position: absolute;
+  right: -6px;
+  bottom: -6px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+  background-size: 100% 100%;
+}
+
+.reservation-list.pay-companion .reservation-list_name {
+  margin-top: 8px;
+}
+
+.reservation-list.pay-companion .companion-box.rank .rank-box {
+  color: #FFE500;
+}
