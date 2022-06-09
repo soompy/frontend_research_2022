@@ -30,3 +30,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
       -ms-flex-align: center;
           align-items: center;
 }
+
+.now-month {
+  background: #ddd;
+}
+
+.now-day {
+  background: #999;
+}
+
+td {
+  border: 1px solid #000;
+  vertical-align: middle;
+  font-family: monospace;
+  padding: 1em;
+}

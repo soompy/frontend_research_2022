@@ -40,23 +40,37 @@
         <div class="calendar-box">
             <!-- moment.js 사용해보기 -->
             <div id="calendar"></div>
+
+            <table id="calendar">
+            </table>
         </div>
     </div>
-    
-
-
-
-
 
     <script src="./js/moment.js"></script>
     <script>
         moment().format();
     </script>
     <script>
-        $(document).ready(function () {
-            var date = new Date();
-            $("#calendar").text(moment(date).format('YYYY-MM-DD a HH:mm:ss'));
-        });
+        var cal = document.getElementById('calendar');
+        var now = moment();
+        var start = moment().startOf('month').startOf('week');
+
+        for (w=0; w<5; w++) {
+            var di = document.createElement("tr");
+            for (d=0; d<7; d++) {
+                    var sp = document.createElement("td");
+                    var day = start.add(1, 'day');
+                    if (day.isSame(now, 'month')) {
+                    sp.classList.add('now-month');
+                }
+                if (day.isSame(now, 'day')) {
+                    sp.classList.add('now-day');
+                }
+                sp.innerHTML = day.format("MMM Do");
+                di.appendChild(sp);
+            }
+            cal.appendChild(di);
+        }
     </script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script> -->
 </body>
