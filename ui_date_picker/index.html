@@ -4,10 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/datepicker.css">
+    <title>데이트피커</title>
 </head>
 <body>
+    <!-- input date 형태 -->
+    <label for="start">Start date:</label>
+    <input type="date" id="start" name="trip-start" value="2022-06-09" min="2022-01-01" max="2022-12-31">
     
+    <!-- select 형태 -->
+    <div class="calendar-wrap">
+        <!-- 캘린더 피커 -->
+        <div class="calendar-select-picker">
+            <select name="year" id="calendar-year">
+                <option value="">2022</option>
+                <option value="">2021</option>
+            </select>
+            <span>년</span>
+            <select name="month" id="calendar-month">
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+            </select>
+            <span>월</span>
+            <select name="day" id="calendar-day">
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">2</option>
+            </select>
+            <span>일</span>
+        </div>
+
+        <!-- 캘린더 -->
+        <div class="calendar-box">
+            <!-- moment.js 사용해보기 -->
+            <div id="calendar"></div>
+        </div>
+    </div>
+    
+
+
+
+
+
+    <script src="./js/moment.js"></script>
+    <script>
+        moment().format();
+    </script>
+    <script>
+        $(document).ready(function () {
+            var date = new Date();
+            $("#calendar").text(moment(date).format('YYYY-MM-DD a HH:mm:ss'));
+        });
+    </script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script> -->
 </body>
 </html>
