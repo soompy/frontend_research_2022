@@ -1,0 +1,183 @@
+// 유의사항
+.notice {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  background: #222222;
+  justify-content: flex-start;
+  .inner {
+    padding: 40px 30px 50px;
+  }
+  .checkpoint {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #eeeeee;
+    .point {
+      width: 20px;
+      height: 20px;     
+      background: url("../images/common/alert-circle.png") center center
+        no-repeat;
+      background-size: 100%;
+      margin-right: 4px;
+    }
+  
+  }
+  .title-info {
+    font-size: 14px;
+    padding-bottom: 8px;
+    margin-top: 20px;
+    color: #f1f1f1;
+  }
+  .info {
+    position: relative;
+    font-size: 14px;
+    line-height: 21px;
+    color: #eeeeee;
+    padding-left: 10px;
+    margin-bottom: 8px;
+    &:before {
+      display: block;
+      clear: both;
+      content: "-";
+      width: 10px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .bottom-bi {
+    display: block;
+    width: 29%;
+    margin: 50px auto 0;
+  }
+}
+
+// 입력
+.input-info-text {
+  width: 100%;
+  font-size: 15px;
+  text-align: left;
+  color: #5d5f66;
+  margin-bottom: 14px;
+}
+.input-form-wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 22px 20px 30px;
+  .form-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 8px;
+    .form-label {
+      width: 20%;
+      font-size: 15px;
+      text-align: left;
+      flex-shrink: 0;
+    }
+    .form-control {
+      width: 80%;
+      font-size: 14px;
+      border: 1px solid #e5e5e5;
+      border-radius: 3px;
+      padding: 10px;
+      &::placeholder {
+        color: #b2b2b2;
+      }
+    }
+    .btn-lightGrey {
+      flex-shrink: 0;
+      font-size: 15px;
+      color: #606060;
+      background: #f2f2f2;
+      border: 1px solid #e5e5e5;
+      padding: 10px 14px;
+      margin-left: 8px;
+      box-sizing: border-box;
+      border-radius: 3px;
+    }
+    .flex-column {
+      display: flex;
+      flex-direction: column;
+    }
+    .flex-wrap {
+      display: flex;
+      align-items: center;
+      + .form-control {
+        width: 100%;
+        margin-top: 8px;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+
+// 체크박스
+.terms-chk-box {
+  display: flex;
+  flex-direction: column;
+  font-family: "Spoqa HanSans Neo", "sans-serif";
+  padding: 0 20px;
+  background-size: 20px 20px;
+  .terms-chk {
+    display: flex;
+    position: relative;
+    height: 20px;
+    padding-right: 10px;
+    font-size: 0;
+    background: url("https://images.kakao.golf/web/images/locker/selfcheckin/chk-ico-off.png")
+      no-repeat;
+    background-size: 20px 20px;
+    .form-agree {
+      font-size: 14px;
+      line-height: 24px;
+      margin-left: 27px;
+    }
+    &.chk-active {
+      background-image: url("https://images.kakao.golf/web/images/locker/selfcheckin/chk-ico-on.png");
+    }
+  }
+  .check-text {
+    font-size: 11px;
+    line-height: 11px;
+    text-align: left;
+    letter-spacing: -0.5px;
+    color: #777777;
+    margin-top: 8px;
+  }
+  .input-chk {
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    z-index: 10;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    border: 0;
+    cursor: pointer;
+  }
+  .input-chk-label {
+    margin-left: 25px;
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+
+
+@media screen and (max-width: 520px) {
+  .notice {
+    .inner {
+      padding: 40px 20px 50px;
+    }
+  }
+}

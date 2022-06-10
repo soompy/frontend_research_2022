@@ -1,0 +1,887 @@
+.area-common {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+.visual {
+  background: url("../images/bg_540.png") center center no-repeat;
+  background-size: 100% 100%;
+  padding: 60px 0 70px;
+}
+
+.visual .title {
+  display: block;
+  width: 63%;
+  margin: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.visual .title img {
+  width: 100%;
+}
+
+.visual .coupon {
+  display: block;
+  width: 67%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 40px auto 63px;
+}
+
+.visual .coupon img {
+  width: 100%;
+}
+
+.rollingbanner {
+  position: relative;
+  width: 100%;
+}
+
+.rollingbanner > .wrap {
+  position: relative;
+  height: 121px;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+.roller {
+  position: absolute;
+  height: 100%;
+}
+
+.roller > ul {
+  margin: 0;
+  padding: 1px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.roller > ul > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 16px;
+}
+
+.roller > ul > li img {
+  width: 110px;
+  height: 110px;
+}
+
+.roller.original {
+  -webkit-animation: 33s linear 0s infinite normal forwards running rollingleft1;
+          animation: 33s linear 0s infinite normal forwards running rollingleft1;
+}
+
+.roller.clone {
+  -webkit-animation: 33s linear 0s infinite normal none running rollingleft2;
+          animation: 33s linear 0s infinite normal none running rollingleft2;
+}
+
+@-webkit-keyframes rollingleft1 {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  50.01% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes rollingleft1 {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  50.01% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes rollingleft2 {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
+  }
+}
+
+@keyframes rollingleft2 {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
+  }
+}
+
+@keyframes rollingleft1 {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  50.01% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes rollingleft2 {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
+  }
+}
+
+.gift-wrap {
+  width: 100%;
+  padding: 30px 20px 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.gift-wrap .gift-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 26px;
+  margin-bottom: 14px;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+.gift-wrap .gift-box .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+.gift-wrap .gift-box .text span {
+  font-size: 14px;
+  color: #777777;
+  padding-bottom: 3px;
+}
+
+.gift-wrap .gift-box .text strong {
+  font-size: 17px;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  color: #333333;
+  padding: 0;
+}
+
+.gift-wrap .gift-box:nth-child(1) {
+  background-image: url("../images/gift_01.png");
+  background-size: 110px auto;
+  background-position: calc(100% - 26px) center;
+}
+
+.gift-wrap .gift-box:nth-child(2) {
+  background-image: url("../images/gift_02.png");
+  background-size: 110px auto;
+  background-position: calc(100% - 26px) center;
+}
+
+.gift-wrap .gift-box:nth-child(3) {
+  background-image: url("../images/gift_03.png");
+  background-size: 75px auto;
+  background-position: calc(100% - 37px) center;
+}
+
+.gift-wrap .gift-box:nth-child(4) {
+  background-image: url("../images/gift_05.png");
+  background-size: 75px auto;
+  background-position: calc(100% - 37px) center;
+}
+
+.gift-wrap .gift-box:nth-child(5) {
+  background-image: url("../images/gift_04.png");
+  background-size: 75px auto;
+  background-position: calc(100% - 37px) center;
+  margin-bottom: 0;
+}
+
+.event-wrap {
+  background: #2D59C8;
+  text-align: center;
+  color: #ffffff;
+  padding: 50px 75px 70px;
+}
+
+.event-wrap .event {
+  width: 100%;
+  margin-bottom: 46px;
+}
+
+.event-wrap .event .event-tag {
+  display: inline-block;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: bold;
+  color: #D2FF2E;
+  border: 1.5px solid #D2FF2E;
+  border-radius: 40px;
+  padding: 12px 19px;
+}
+
+.event-wrap .event .title {
+  font-size: 37px;
+  line-height: 50px;
+  font-family: "Gmarket Sans";
+  margin: 24px 0 18px;
+}
+
+.event-wrap .event p {
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.04em;
+  margin-bottom: 18px;
+}
+
+.event-wrap .event p.op_06 {
+  font-size: 19px;
+  line-height: 30px;
+  letter-spacing: -0.03em;
+  opacity: 0.6;
+}
+
+.event-wrap .event .coupon-view {
+  font-family: "Gmarket Sans";
+  padding: 0 10px;
+}
+
+.event-wrap .event .coupon-view .coupon-img {
+  width: 100%;
+  max-width: 370px;
+  padding: 40px 85px 26px 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 34px auto 20px;
+  background: url("../images/coupon-bg.png") center center no-repeat;
+  background-size: 100% 100%;
+  color: #0059AA;
+  text-align: left;
+  letter-spacing: -0.02em;
+}
+
+.event-wrap .event .coupon-view .coupon-img .top-text {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 8px;
+}
+
+.event-wrap .event .coupon-view .coupon-img .main-text {
+  font-size: 32px;
+  line-height: 37px;
+}
+
+.event-wrap .event .coupon-view .coupon-img .sub-text {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
+}
+
+.event-wrap .event .coupon-view .coupon-img .sub-text .star {
+  position: absolute;
+  left: 0;
+  top: 3px;
+}
+
+.event-wrap .event .coupon-view .coupon-img .sub-text .text {
+  margin-left: 8px;
+}
+
+.event-wrap .event .coupon-view .coupon-img .coupon-counter {
+  text-align: right;
+  margin-top: 49px;
+}
+
+.event-wrap .event .coupon-view .coupon-img .coupon-counter p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.event-wrap .event .coupon-view .coupon-img .coupon-counter p .left-text {
+  opacity: 0.8;
+  line-height: 21px;
+}
+
+.event-wrap .event .coupon-view .coupon-img .coupon-counter p .right-text {
+  opacity: 1;
+  line-height: 21px;
+}
+
+.event-wrap .event .coupon-view .coupon-img .coupon-counter .counting-box {
+  opacity: 1;
+  display: inline-block;
+  font-size: 32px;
+  line-height: 38px;
+  font-family: "NotoSansKR-Bold";
+  margin-left: 6px;
+  margin-right: 2px;
+  letter-spacing: -0.03em;
+}
+
+.event-wrap .event .coupon-view .coupon-img.kp {
+  background: url("../images/coupon-bg-kp.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+
+.event-wrap .event .coupon-view .coupon-img.kakaot {
+  background: url("../images/coupon-bg-kakaot.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+
+.event-wrap .event .coupon-view .coupon-img.kakaot .coupon-counter {
+  margin-top: 29px;
+}
+
+.event-wrap .event .coupon-btn {
+  width: 100%;
+  height: 66px;
+  font-size: 19px;
+  font-weight: bold;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  margin: auto;
+  background: #D2FF2E;
+  color: #002E58;
+  border-radius: 8px;
+}
+
+.event-wrap .event .coupon-btn.coupon-line {
+  background: transparent;
+  border: 1px solid #D2FF2E;
+  color: #D2FF2E;
+}
+
+.event-wrap .event:last-child {
+  margin-bottom: 0;
+}
+
+.event-wrap .square-box {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  position: relative;
+  margin-bottom: 48px;
+  z-index: 1;
+}
+
+.event-wrap .square-box p {
+  background: #153DA4;
+  font-size: 19px;
+  font-family: "Gmarket Sans";
+  color: #FFFFFF;
+  padding: 10px 20px;
+}
+
+.event-wrap .square-box:before {
+  display: block;
+  clear: both;
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 8px;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.16);
+}
+
+.event-wrap.darkBlue {
+  background: #153DA4;
+}
+
+.event-wrap.darkBlue .event {
+  padding: 0 20px;
+}
+
+.event-wrap.darkBlue .square-box p {
+  background: #456CCF;
+}
+
+.event-wrap.darkBlue .square-box:before {
+  background: rgba(0, 0, 0, 0.17);
+}
+
+.name-tag {
+  width: 370px;
+  height: 370px;
+  margin: auto;
+  position: relative;
+  background: url(../images/lion.png) center 65px no-repeat #ffcc00;
+  background-size: 200px auto;
+  border-radius: 15px;
+  padding: 52px 16px 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 48px;
+}
+
+.name-tag .tagging {
+  position: absolute;
+  left: 50%;
+  top: 18px;
+  width: 46px;
+  height: 18px;
+  border-radius: 8px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #2D59C8;
+}
+
+.name-tag .tagging .strap {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  display: block;
+  width: 37px;
+  height: 64px;
+  background: #3a3a3a;
+  -webkit-transform: translate(-50%, -8px);
+          transform: translate(-50%, -8px);
+  border-radius: 8px;
+}
+
+.name-tag .tagging .strap:after {
+  position: absolute;
+  left: -2px;
+  top: 0;
+  display: block;
+  clear: both;
+  content: "";
+  width: calc(100% + 4px);
+  height: 50%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(39.62%, #2D59C8), color-stop(83.54%, rgba(45, 89, 200, 0)));
+  background: linear-gradient(180deg, #2D59C8 39.62%, rgba(45, 89, 200, 0) 83.54%);
+}
+
+.name-tag .nameTag {
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  z-index: 1;
+  width: calc(100% - 32px);
+  height: 64px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 19px;
+  font-weight: 500;
+  color: #ffffff;
+  background: #153DA4;
+  border-radius: 10px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.swiper-slide .slide-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.swiper-slide .slide-inner img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper-slide .slide-inner p {
+  font-size: 16px;
+  opacity: 0.7;
+  margin-top: 22px;
+}
+
+.swiper-slide .slide-inner.yf {
+  position: relative;
+}
+
+.swiper-slide .slide-inner.yf:after {
+  position: absolute;
+  right: 7px;
+  top: 0;
+  display: block;
+  clear: both;
+  content: "";
+  width: 26%;
+  height: 26%;
+  background: url("../images/swiper_01_2.png") center center no-repeat;
+  background-size: 100%;
+}
+
+.celebration .swiper-wrapper {
+  margin: 36px 0 10px;
+}
+
+.celebration .swiper-wrapper .swiper-slide {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.share-box .title {
+  font-size: 30px;
+  font-family: "Gmarket Sans";
+  font-weight: bold;
+  margin: 50px 0 30px;
+  letter-spacing: -0.02em;
+}
+
+.share-box .btn-share {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.share-box .btn-share .share {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 27px;
+  height: 50px;
+  border-radius: 50px;
+  border: 1.5px solid #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.share-box .btn-share .share img {
+  width: 18px;
+  height: 18px;
+  margin-right: 7px;
+}
+
+.coupon-prize {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  padding: 40px 20px 0;
+}
+
+.coupon-prize .prize-top-box {
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 20px;
+}
+
+.coupon-prize .prize-bottom-box {
+  padding-top: 20px;
+}
+
+.coupon-prize .prize-bottom-box .title {
+  font-size: 15px;
+  text-align: left;
+}
+
+.coupon-prize .prize-bottom-box .input-form-wrap {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.coupon-prize .prize-bottom-box .input-form-wrap .copy {
+  margin-top: 12px;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+}
+
+.coupon-prize .prize-bottom-box .input-form-wrap .copy .form-control,
+.coupon-prize .prize-bottom-box .input-form-wrap .copy .btn-lightGrey {
+  border: none;
+}
+
+.coupon-prize .prize-bottom-box .input-form-wrap .copy .form-control:valid {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.coupon-prize .prize-bottom-box .input-form-wrap .copy .btn-lightGrey {
+  border-radius: 0;
+  border-left: 1px solid #e5e5e5;
+}
+
+.coupon-prize .prize-title {
+  font-size: 18px;
+  font-family: "Kakao-Bd";
+}
+
+.coupon-prize .image-wrapper {
+  display: block;
+  width: 70%;
+  margin: auto;
+}
+
+.coupon-prize .image-wrapper img {
+  width: 100%;
+}
+
+.coupon-prize .grey-text {
+  font-size: 15px;
+  color: #5d5f66;
+  margin: 12px 0 20px;
+}
+
+.coupon-prize .blue-text {
+  font-size: 15px;
+  color: #0059AA;
+  margin: 12px 0 0;
+}
+
+.event-info {
+  margin-top: 12px;
+}
+
+.event-info .info {
+  position: relative;
+  font-size: 11px;
+  text-align: left;
+  line-height: 16px;
+  color: #777777;
+  padding-left: 8px;
+  margin-bottom: 6px;
+}
+
+.event-info .info:before {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  display: block;
+  clear: both;
+  content: "";
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #777777;
+}
+
+.event-info .info:last-child {
+  margin-bottom: 0;
+}
+
+.event-info .link {
+  color: #2793FF;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 520px) {
+  .break {
+    display: inline-block;
+  }
+  .visual {
+    background: url("../images/bg.png") center center no-repeat;
+    background-size: cover;
+  }
+  .visual .title {
+    width: 100%;
+    padding: 0 36.5px;
+  }
+  .visual .coupon {
+    width: 100%;
+    margin: 20px auto 32px;
+    padding: 0 32px;
+  }
+  .event-wrap {
+    padding: 50px 20px 70px;
+  }
+  .event-wrap .event .event-tag {
+    font-size: 18px;
+    line-height: 18px;
+    padding: 11px 16px;
+  }
+  .event-wrap .event .title {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 20px 0 14px;
+  }
+  .event-wrap .event p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 14px;
+  }
+  .event-wrap .event p.op_06 {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .event-wrap .event .coupon-view .coupon-img {
+    padding: 32px 67px 20px 40px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .event-wrap .event .coupon-view .coupon-img .top-text {
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 6px;
+  }
+  .event-wrap .event .coupon-view .coupon-img .main-text {
+    font-size: 26px;
+    line-height: 30px;
+  }
+  .event-wrap .event .coupon-view .coupon-img .sub-text {
+    margin-top: 5px;
+    font-size: 10px;
+    line-height: 11px;
+  }
+  .event-wrap .event .coupon-view .coupon-img .sub-text .star {
+    top: 2px;
+  }
+  .event-wrap .event .coupon-view .coupon-img .coupon-counter {
+    margin-top: 42px;
+  }
+  .event-wrap .event .coupon-view .coupon-img .coupon-counter p {
+    font-size: 12px;
+  }
+  .event-wrap .event .coupon-view .coupon-img .coupon-counter p .left-text, .event-wrap .event .coupon-view .coupon-img .coupon-counter p .right-text {
+    line-height: 18px;
+  }
+  .event-wrap .event .coupon-view .coupon-img .coupon-counter .counting-box {
+    font-size: 26px;
+    line-height: 30px;
+    margin-left: 4px;
+  }
+  .event-wrap .event .coupon-view .coupon-img.kakaot .coupon-counter {
+    margin-top: 25px;
+  }
+  .event-wrap .event .coupon-btn {
+    font-size: 16px;
+  }
+  .event-wrap .square-box p {
+    font-size: 16px;
+  }
+  .name-tag {
+    width: 300px;
+    height: 300px;
+    background: url("../images/lion.png") center 62% no-repeat #ffcc00;
+    background-size: auto 74%;
+  }
+  .name-tag .nameTag {
+    font-size: 16px;
+  }
+  .share-box .title {
+    font-size: 26px;
+  }
+}

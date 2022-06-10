@@ -1,0 +1,245 @@
+.notice {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  background: #222222;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.notice .inner {
+  padding: 40px 30px 50px;
+}
+
+.notice .checkpoint {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #eeeeee;
+}
+
+.notice .checkpoint .point {
+  width: 20px;
+  height: 20px;
+  background: url("../images/common/alert-circle.png") center center no-repeat;
+  background-size: 100%;
+  margin-right: 4px;
+}
+
+.notice .title-info {
+  font-size: 14px;
+  padding-bottom: 8px;
+  margin-top: 20px;
+  color: #f1f1f1;
+}
+
+.notice .info {
+  position: relative;
+  font-size: 14px;
+  line-height: 21px;
+  color: #eeeeee;
+  padding-left: 10px;
+  margin-bottom: 8px;
+}
+
+.notice .info:before {
+  display: block;
+  clear: both;
+  content: "-";
+  width: 10px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.notice .info:last-child {
+  margin-bottom: 0;
+}
+
+.notice .bottom-bi {
+  display: block;
+  width: 29%;
+  margin: 50px auto 0;
+}
+
+.input-info-text {
+  width: 100%;
+  font-size: 15px;
+  text-align: left;
+  color: #5d5f66;
+  margin-bottom: 14px;
+}
+
+.input-form-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 22px 20px 30px;
+}
+
+.input-form-wrap .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.input-form-wrap .form-group .form-label {
+  width: 20%;
+  font-size: 15px;
+  text-align: left;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.input-form-wrap .form-group .form-control {
+  width: 80%;
+  font-size: 14px;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.input-form-wrap .form-group .form-control::-webkit-input-placeholder {
+  color: #b2b2b2;
+}
+
+.input-form-wrap .form-group .form-control:-ms-input-placeholder {
+  color: #b2b2b2;
+}
+
+.input-form-wrap .form-group .form-control::-ms-input-placeholder {
+  color: #b2b2b2;
+}
+
+.input-form-wrap .form-group .form-control::placeholder {
+  color: #b2b2b2;
+}
+
+.input-form-wrap .form-group .btn-lightGrey {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  font-size: 15px;
+  color: #606060;
+  background: #f2f2f2;
+  border: 1px solid #e5e5e5;
+  padding: 10px 14px;
+  margin-left: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.input-form-wrap .form-group .flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.input-form-wrap .form-group .flex-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.input-form-wrap .form-group .flex-wrap + .form-control {
+  width: 100%;
+  margin-top: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.terms-chk-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Spoqa HanSans Neo", "sans-serif";
+  padding: 0 20px;
+  background-size: 20px 20px;
+}
+
+.terms-chk-box .terms-chk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  height: 20px;
+  padding-right: 10px;
+  font-size: 0;
+  background: url("https://images.kakao.golf/web/images/locker/selfcheckin/chk-ico-off.png") no-repeat;
+  background-size: 20px 20px;
+}
+
+.terms-chk-box .terms-chk .form-agree {
+  font-size: 14px;
+  line-height: 24px;
+  margin-left: 27px;
+}
+
+.terms-chk-box .terms-chk.chk-active {
+  background-image: url("https://images.kakao.golf/web/images/locker/selfcheckin/chk-ico-on.png");
+}
+
+.terms-chk-box .check-text {
+  font-size: 11px;
+  line-height: 11px;
+  text-align: left;
+  letter-spacing: -0.5px;
+  color: #777777;
+  margin-top: 8px;
+}
+
+.terms-chk-box .input-chk {
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  z-index: 10;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  border: 0;
+  cursor: pointer;
+}
+
+.terms-chk-box .input-chk-label {
+  margin-left: 25px;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+@media screen and (max-width: 520px) {
+  .notice .inner {
+    padding: 40px 20px 50px;
+  }
+}

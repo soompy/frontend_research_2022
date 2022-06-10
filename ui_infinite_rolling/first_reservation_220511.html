@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">      
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/first-reservation.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <title>프렌즈샷:누구나골프 사전예약</title>
+</head>
+
+<!-- [dev] 팝업과 alert-pop-dimm이 뜰 때 body에 hide 클래스가 추가됩니다 -->
+<body>
+    <div id="wrapper">
+        <div class="container">
+            <section class="contents">
+                <div class="area-common visual">
+                    <span class="title"><img src="./images/vi-title.png" alt="summer festival"></span>
+                    <span class="coupon"><img src="./images/vi-coupon.png" alt="이용권 쿠폰"></span>
+
+                    <div class="rollingbanner">
+                        <div class="wrap">
+                            <div class="roller">
+                                <ul>
+                                    <li>
+                                        <img src="./images/gift1.png" alt="거리 측정기 ">
+                                    </li>
+                                    <li>
+                                        <img src="./images/gift2.png" alt="카카오T">
+                                    </li>
+                                    <li>
+                                        <img src="./images/gift3.png" alt="홀인원 보험">
+                                    </li>
+                                    <li>
+                                        <img src="./images/gift4.png" alt="스탠바이미">
+                                    </li>
+                                    <li>
+                                        <img src="./images/gift5.png" alt="선결제 골프장">
+                                    </li>
+                                    <li>
+                                        <img src="./images/gift6.png" alt="네임택">
+                                    </li>
+                                    <li>
+                                        <img src="./images/gift7.png" alt="4인 라운드 이용권">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="area-common event-wrap">
+                    <div class="event">
+                        <div class="square-box">
+                            <p>설레는 라운드 예약 전!</p>
+                        </div>
+                        <span class="event-tag">혜택 01</span>
+                        <h3 class="title">첫 예약 응원해요!</h3>
+                        <p>티타임 예약이 부담스럽다면 아래 쿠폰 받기 클릭,<br/>
+                        <strong>5만원 할인쿠폰</strong>받고 편하게 예약하세요!</p>
+                        <p class="op_06">※ 선결제 골프장에서만 사용 가능</p>
+                        <div class="coupon-view">
+                            <div class="coupon-img">
+                                <p class="top-text">선결제 골프장</p>
+                                <strong class="main-text">5만원 할인쿠폰</strong>
+                                <div class="coupon-counter">
+                                    <!-- [dev] 실시간 남은 쿠폰 수 counting-box -->
+                                    <p><span class="left-text">남은 쿠폰</span> <strong class="counting-box">20000</strong> <span class="right-text">장</span></p>
+                                </div>
+                            </div>
+                            
+                            <button class="coupon-btn">
+                                <span>쿠폰받고 골프장 예약하기</span> 
+                            </button>                          
+                        </div>
+                    </div>
+                    
+                    <div class="event">
+                        <span class="event-tag">혜택 02</span>
+                        <h3 class="title">다시 만나서 반가워요!</h3>
+                        <p>모두가 행복한 혜택, 기존 예약자도<br/>
+                        <strong>2만원 할인쿠폰</strong>받고 티타임 예약하세요!</p>
+                        <p class="op_06">※ 선결제 골프장에서만 사용 가능</p>
+                        
+                        <div class="coupon-view">
+                            <div class="coupon-img">
+                                <p class="top-text">선결제 골프장</p>
+                                <strong class="main-text">2만원 할인쿠폰</strong>
+                                <div class="coupon-counter">
+                                    <p><span class="left-text">남은 쿠폰</span> <strong class="counting-box">20000</strong> <span class="right-text">장</span></p>
+                                </div>
+                            </div>
+                            <button class="coupon-btn">
+                                <span>쿠폰받고 골프장 예약하기</span> 
+                            </button>                          
+                        </div>
+                    </div>
+                </div>
+
+                <div class="area-common event-wrap darkBlue">
+                    <div class="square-box">
+                        <p>드디어 라운드 전 날!</p>
+                    </div>
+                    <div class="event">
+                        <span class="event-tag">혜택 03</span>
+                        <h3 class="title">홀인원 하면 <br> 축하금이 와르르!</h3>
+                        <p>티타임 예약하면 홀인원보험은 덤, <br/>
+                        <strong>무료로 보호받고</strong>안전하게 라운드 다녀오세요!</p>
+                        <p class="op_06">※ 예약자에게만 홀인원보험 무료 쿠폰 1회 제공 <br/>
+                            라운드 전 미리 쿠폰 적용하여 보험가입 필요</p>
+                        
+                        <div class="coupon-view">
+                            <div class="coupon-img kp">
+                                <p class="top-text">홀인원보험</p>
+                                <strong class="main-text">무료 쿠폰</strong>
+                                <div class="coupon-counter">
+                                    <p><span class="left-text">남은 쿠폰</span> <strong class="counting-box">100</strong> <span class="right-text">장</span></p>
+                                </div>
+                            </div>
+                            <button class="coupon-btn">
+                                <span>쿠폰 받기</span> 
+                            </button> 
+                            <button class="coupon-btn coupon-line mt-10">
+                                <span>홀인원보험 신청하기</span> 
+                            </button>                          
+                        </div>
+                    </div>  
+
+                    <div class="event">
+                        <span class="event-tag">혜택 04</span>
+                        <h3 class="title">라운드 조심히 <br/>잘 다녀오세요!</h3>
+                        <p>벤티타고 편안하게 골프장 다녀오세요,<br/>
+                        <strong>카카오T 벤티 예약 3만원 할인 혜택</strong>을 드려요!</p>
+                        <p class="op_06"> ※ 카카오T 벤티 예약 쿠폰은 서울/경기/인천 지역 <br/>
+                            골프장을 예약한 회원에 한해 제공</p>
+                        
+                        <div class="coupon-view">
+                            <div class="coupon-img kakaot">
+                                <p class="top-text">카카오T 벤티 예약</p>
+                                <strong class="main-text">3만원 할인쿠폰</strong>
+                                <span class="sub-text"> <span class="star">&#x002A;</span> <span class="text">벤티 즉시호출 콜에 적용 불가</span></span>
+                                <div class="coupon-counter">
+                                    <p><span class="left-text">남은 쿠폰</span> <strong class="counting-box">20000</strong> <span class="right-text">장</span></p>
+                                </div>
+                            </div>
+                            <button class="coupon-btn">
+                                <span>쿠폰 받기</span> 
+                            </button> 
+                            <button class="coupon-btn coupon-line mt-10">
+                                <span>카카오T 쿠폰 등록 & 벤티 예약하기</span> 
+                            </button>                          
+                        </div>
+                    </div>  
+                </div>   
+                
+                <div class="area-common event-wrap pl-00 pr-00">
+                    <div class="square-box">
+                        <p>라운드 다녀온 기념으로!</p>
+                    </div>
+                    <div class="event">
+                        <span class="event-tag">혜택 05</span>
+                        <h3 class="title">캐디백에 <br>네임택은 필수!</h3>
+                        <p class="mb-12">
+                            첫 예약 후 예약하신 라운드 다녀오면<br/>
+                            <strong>카카오골프예약 한정판 네임택</strong>을 보내드려요!</p>
+                            <p class="op_06"> ※ 네임택 발송을 위한 사전 주소 취합</p>
+                        <div class="coupon-box name-tag">
+                            <div class="tagging">
+                                <span class="strap"></span>                            
+                            </div>                            
+                            <button class="nameTag btn-green">주소 입력/확인 하기</button>
+                        </div>
+                    </div>
+
+
+                    <div class="event mb-00">
+                        <span class="event-tag">혜택 06</span>
+                        <h3 class="title">라운드 다녀오면 <br/>시원하게 쏜다!</h3>
+                        <p class="mb-12">
+                            예약해서 라운드 다녀오신 분들 중<br/>
+                            <strong>추첨을 통해 아래 경품</strong>을 보내드려요!</p>
+                            <p class="op_06"> ※ 이벤트 공유 많이 할수록 당첨확률 UP!</p>
+                        
+                    </div>
+
+                    <div class="swiper celebration">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slide-inner">
+                                    <img src="./images/gift-01.png" alt="거리 측정기">
+                                </div>                                
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-inner">
+                                    <img src="./images/gift-02.png" alt="4인 무료 라운드 이용권">
+                                </div>                                
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-inner">
+                                    <img src="./images/gift-03.png" alt="스탠바이미">
+                                </div>                                
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                    <div class="share-box">
+                        <div class="title">이벤트를 공유해보세요!</div>
+                        <div class="btn-share">
+                            <button class="share btn-kakaotalk"> <img src="./images/ic_kakaotalk.png" alt="kakaotalk"> 카카오톡 공유하기</button>                            
+                        </div>
+                    </div>  
+                </div>
+                
+                <section class=" notice">
+                    <div class="inner">
+                        <h3 class="checkpoint"><span class="point"></span> 이벤트 안내사항</h3>     
+                        <p class="info">이벤트 기간 : 2022.05.23~2022.06.08</p>                   
+                        <p class="info">라운드 기간 : 2022.05.23~2022.06.22</p>
+                        <p class="info">쿠폰 발송 기간 : 2022.05.23~2022.06.08 <br/>* 쿠폰 혜택 01~02는 명의 당 1회 지급, 혜택 03~04는 계정 당 1회 지급됩니다.</p>                   
+                        <p class="info">당첨자 발표 예정일 : 2022.06.29</p>
+                        <p class="info">경품 발송 기간 : 2022.7.1~2022.7.15</p>                   
+                        <p class="info">본 이벤트는 카카오골프예약에서 골프장 예약을 한 회원들을 대상으로 진행되는 이벤트입니다. <span class="break">(챗봇, 홈페이지 예약 제외)</span> <br> 본 이벤트는 회사의 사정에 따라 사전 고지 없이 조기 종료 또는 변경될 수 있습니다.</p>
+                        <p class="info">선결제 골프장 할인 쿠폰 <br/>
+                            선결제 골프장 할인쿠폰은 첫 예약자에게 5만원(선착순 3만장), 기존 예약 이력이 있는 회원에게 2만원(선착순 5만장) 쿠폰이 발급됩니다. <br/>
+                            발급된 선결제 골프장 할인쿠폰은 선결제가 가능한 골프장에 대해서만 할인되며, 예약자만 사용 가능합니다.
+                        </p>                   
+                        <p class="info">KP보험 서비스 <br/>
+                            이벤트 기간 내 카카오골프예약으로 골프장을 예약하시면 홀인원보험 무료 쿠폰을 1회 받으실 수 있습니다. 
+                            홀인원보험 무료 쿠폰은 예약하신 대표자에게만 제공됩니다.
+                            홀인원보험 무료 쿠폰을 이미 사용했거나 받지 못한 경우라도(동반자 포함) 본 이벤트 페이지나 카카오VX 채널톡 내 ‘홀인원보험 신청하기’를 통해 저렴한 비용으로 홀인원보험에 가입하실 수 있습니다.
+                            홀인원보험은 카카오VX에서 예약하신 라운딩에만 적용 가능하며,  다수의 예약을 하신 경우에도 날짜를 원하는 시점으로 선택하여 가입하실 수 있습니다. 
+                            홀인원보험 무료 쿠폰을 발급 받을 수 있는 이벤트 기간은 5월 23일 00시부터 6월 8일 23시 59분까지입니다.  
+                            홀인원보험 무료 쿠폰은 이벤트 마감일 기준 60일 이내로만(~ 22년 8월 7일 23시 59분) 사용 가능하며, 이후에는 사용하실 수 없습니다.
+                            기타 보험 관련 궁금하신 점이 있으면 KP보험서비스 고객센터 1644-9381로 문의해주세요.(평일 09:30 ~ 18:00)
+                        </p>
+                        <p class="info">카카오T 벤티 예약 서비스 <br/>
+                            이벤트 기간 내 서울/경기/인천 지역 골프장 예약을 완료하시면 카카오T 벤티 예약 3만원(선착순 6천명) 쿠폰이 발급됩니다. 카카오T 할인 쿠폰은 난수형태로 지급되며 발급 후 이벤트 페이지에서 다시 확인하실 수 있습니다. 발급된 할인 쿠폰은 카카오T 앱에서 등록일로부터 45일간 유효합니다. <br/> 카카오T 벤티 예약 서비스는 출발지 기준 서울, 경기, 인천 지역에서만 예약이 가능하며, 벤티 즉시 호출 콜에는 적용이 불가합니다.
+                            벤티 예약 서비스 문의는 카카오T 고객센터로 1644-8830 문의 바랍니다.</p>                   
+                        <p class="info">첫 예약자 대상 네임택 혜택 <br/>
+                            네임택은 카카오골프예약에서 처음으로 골프장 예약 후 라운드까지 완료한 회원 대상(선착순 5천명)으로 지급되며, 예약 취소 및 노쇼 시 이벤트 당첨자 대상에서 제외됩니다.
+                            경품 지급을 받기 위해 받으실 주소를 사전에 입력하셔야 하며, 주소를 입력하지 않았을 경우 이벤트 당첨 및 경품 지급 대상자에서 제외됩니다.
+                            주소를 잘못 입력하였을 경우 재입력 하시면 새로운 주소로 저장되며, 입력하시는 주소는 경품 지급 후 7일 이내 파기됩니다.</p>
+                        <p class="info">추첨을 통한 경품 이벤트 <br/>
+                            골프장 예약 후 라운드까지 완료한 회원 중 추첨을 통해 4인 무료 라운드 이용권(1명), 스탠바이미(1명), 거리 측정기(5명)를 제공하며, 예약 취소 및 노쇼 시 이벤트 당첨자 대상에서 제외됩니다.
+                            해당 상품은 5만원 초과의 경품으로서 제세공과금(22%)은 당첨자에게 부과되며, 제세공과금 부담을 거부할 경우 당첨이 취소될 수 있습니다.
+                            이벤트 당첨자의 개인정보는 경품 제공 대행 업체인 (주)젤라블루에 제공될 수 있습니다.</p>                   
+                        <p class="info">이벤트와 관련한 문의사항은 마이페이지 > 고객센터 > 1:1문의로 등록 바랍니다.</p>
+                    </div>                    
+                </section>
+            </section>
+            
+        </div>
+    </div>
+
+    <!-- [dev] 케이스별 팝업 -->
+    <div class="alert-pop-wrap" style="display: none;">
+        <div class="alert-pop-box">
+            <div class="alert-pop-inner">
+                <div class="alert-pop-cont">
+                    <!-- [dev] 선결제쿠폰 발급 시 -->
+                    <!-- <p class="alert-pop-ttl2">선결제 쿠폰 5만원이 발급되었습니다.</p>
+                    <p class="alert-pop-txt">지금 바로 선결제 골프장을 <br>예약해 보세요.</p> -->
+
+                    <!-- [dev] 혜택 대상자가 아닐 시 -->
+                    <!-- <p class="alert-pop-ttl2">혜택 대상자가 아닙니다.</p>
+                    <p class="alert-pop-txt">다른 혜택을 확인해 주세요.</p> -->
+
+                    <!-- [dev] 쿠폰 받은경우 -->
+                    <!-- <div class="none-title alert-pop-txt">이미 쿠폰을 받으셨습니다.</div> -->
+
+                    <!-- [dev] 예약하지 않은 경우 -->
+                    <!-- <p class="alert-pop-ttl2">예약 후 이벤트에 참여할 수 있어요.</p>
+                    <p class="alert-pop-txt">지금 바로 예약하고 혜택을 <br/>받아보세요.</p> -->
+
+                    <!-- [dev] 이벤트 대상자이나 쿠폰이 모두 소진된 경우 -->
+                    <!-- <p class="alert-pop-ttl2">쿠폰이 모두 소진 되었습니다.</p>
+                    <p class="alert-pop-txt">곧 새로운 이벤트가 진행될 예정이니 <br/>조금만 기다려주세요.</p> -->
+
+                    <!-- [dev] 이벤트 대상자이나 네임택이 모두 소진된 경우 -->
+                    <!-- <p class="alert-pop-ttl2">네임택이 모두 소진 되었습니다.</p>
+                    <p class="alert-pop-txt">곧 새로운 이벤트가 진행될 예정이니 <br/>조금만 기다려주세요.</p> -->
+
+                    <!-- [dev] 이벤트 url복사 -->
+                    <!-- <div class="none-title alert-pop-txt">이벤트 URL이 복사되었습니다.</div> -->
+                  
+                    <!-- [dev] 이벤트 대상자인 경우 -->
+                    <!-- <p class="alert-pop-ttl2">네임택 이벤트 대상자입니다.</p>
+                    <p class="alert-pop-txt">라운드를 완료하시면 <br/>네임택을 보내드려요.</p> -->
+
+                    <!-- [dev] 배송정보 입력 요청 -->
+                    <!-- <div class="none-title alert-pop-txt">배송 정보를 입력해 주세요.</div> -->
+                    
+                    <!-- [dev] 개인정보 이용동의 -->
+                    <!-- <div class="none-title alert-pop-txt">개인 정보 이용 동의를 <br/>체크해 주세요.</div> -->
+
+                    <!-- [dev] 혜택 대상자가 아닌 경우 -->
+                    <p class="alert-pop-ttl2">첫 예약을 준비 중이시군요?</p>
+                    <p class="alert-pop-txt">첫 예약 응원 <br/>5만원 쿠폰을 받으세요!</p>
+
+                    <a href="#" class="alert-pop-confirm">확인</a>
+                </div>
+            </div>
+        </div>
+    </div>         
+
+    <!-- [dev] 첫 예약 축하 팝업 -->
+    <div class="alert-pop-wrap" style="display: none;">
+        <div class="alert-pop-box">
+            <div class="alert-pop-inner">
+                <div class="alert-pop-cont">                    
+                    <div class="coupon-prize">
+                        <div class="prize-top-box">
+                            <strong class="prize-title">	
+                                &#127881; 예약을 축하합니다 &#127881;</strong>
+                            <p class="grey-text">카카오T 벤티 예약 3만원 <br/>할인 혜택을 받아 가세요.</p>
+                            <!--
+                                [dev] 쿠픈클래스명 // **쿠폰에 따라 쿠폰클래스명과 텍스트를 바꿔주세요!
+                                카카오T 벤티 예약 할인권 coupon-navy
+                                4인 라운드 이용권 쿠폰 coupon-blue
+                                선결제 골프장 할인쿠폰 coupon-green
+                                홀인원보험 무료쿠폰 coupon-skyblue
+                            -->
+                            <span class="image-wrapper"><img src="./images/coupon-navy.png" alt="쿠폰 이미지"></span>
+                            <p class="blue-text">30,000원 할인쿠폰</p>
+                        </div>   
+                        <div class="prize-bottom-box">
+                            <div class="input-form-wrap pd-00">
+                                <p class="title">카카오T 벤티 예약 3만원 할인 쿠폰</p>
+                                <div class="form-group copy">
+                                    <input type="text" class="form-control" value="12152123124123123">
+                                    <button class="btn-lightGrey ml-00">복사하기</button>
+                                </div>
+                            </div>
+                            <div class="event-info">
+                                <p class="info">위 쿠폰의 ‘복사하기’ 버튼을 통해 복사하세요.</p>
+                                <p class="info">카카오T  마이페이지 > 쿠폰번호 등록 후 결제 시 <br/> 사용 가능합니다.</p>
+                                <p class="info">벤티 즉시호출 콜에 적용 불가합니다.</p>
+                                <p class="info"><a href="" class="link">카카오T 쿠폰 등록 & 벤티 예약하기</a></p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <a href="#" class="alert-pop-confirm">확인</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- [dev] 배송 정보 입력하기 팝업 -->
+    <div class="alert-pop-wrap" style="display: none;">
+        <div class="alert-pop-box">
+            <div class="alert-pop-inner">
+                <div class="alert-pop-cont">
+                    <p class="alert-pop-ttl2 normal">배송정보 입력하기</p>
+                    <div class="content-wrap">                        
+                        <div class="input-form-wrap">
+                            <p class="input-info-text">이벤트 경품 배송을 위해 개인정보를 <br />입력해주세요.</p>
+                            <div class="form-group">
+                                <lable for="name" class="form-label">이름</lable>
+                                <input type="text" id="name" class="form-control" placeholder="예) 라이언" />
+                            </div>
+                            <div class="form-group">
+                                <lable for="phoneNumber" class="form-label">연락처</lable>
+                                <input type="number" id="phoneNumber" class="form-control" placeholder="예) 010-0000-0000" />                               
+                            </div>
+                            <div class="form-group" style="align-items: flex-start;">
+                                <lable for="phoneNumber" class="form-label pt-10 ">주소</lable>
+                                <div class="flex-column">
+                                    <div class="flex-wrap">
+                                        <input type="text" id="addr" class="form-control" placeholder="주소입력" />
+                                        <button class="btn-lightGrey">우편번호검색</button>
+                                    </div>                                    
+                                    <input type="text" id="addr" class="form-control" placeholder="상세주소 입력" />
+                                </div>                                
+                            </div>
+                        </div>                        
+                        <div class="terms-chk-box">
+                            <div class="terms-chk chk-active">
+                                <input id="termsChk1" type="checkbox" class="input-chk" checked="checked" />
+                                <label for="termsChk1" class="form-agree">[필수] 개인정보 수집 및 이용 동의</label>                                
+                            </div>
+                            
+                            <div class="event-info">
+                                <p class="info">네임택은 라운드 완료 시에만 발송 됩니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert-popup-btnWrap half">
+                        <button class="grey-btn">취소</button>
+                        <button class="yellow-btn">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="alert-pop-dimm"></div>
+
+    <script src="./js/index.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript">   
+        var swiper = new Swiper(".celebration", {
+            loop: true,            
+            spaceBetween: 15,
+            slidesPerView: 1.35,
+            centeredSlides: true,
+             autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,    
+            },
+            breakpoints: {
+                520: {
+                    spaceBetween: 20,
+                    slidesPerView: 1.75,
+                },
+            }
+        });
+    </script>  
+</body>
+</html>
+
