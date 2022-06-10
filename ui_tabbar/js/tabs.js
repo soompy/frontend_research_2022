@@ -149,3 +149,9 @@ $(document).ready(function () {
       }, 1500);
     });
   });
+
+
+  /**
+      .tabs-header li a 클릭시 border가 너비만큼 위치 이동 & 
+      n번째 .tabs-header li a가 선택될 경우 n번째 .tabs-content .tab에 active 클래스가 들어감
+   */
