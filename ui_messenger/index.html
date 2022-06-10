@@ -4,12 +4,688 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
-    <title>드롭다운 메뉴</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/messenger.css">
+    <link rel="stylesheet" href="./css/monitoring_wide.css">
+    <title>메신저</title>
 </head>
 <body>
-    <div class="">
-        
+    <div class="test-bubble">
+        <div class="message-bubble">
+            <p class="manager-time">오후 12:43</p>
+            <div class="test-message-area">
+                <div class="test-message-bubble"><a href="#" class="mention">@전체</a>
+                    홀 아웃 했습니다. 홀 아웃 했습니다.홀 아웃 했습니다.
+                </div>
+            </div>
+        </div>
+
+        <div class="message-bubble">
+            <p class="manager-time">오후 12:43</p>
+            <div class="test-message-area">
+                <div class="test-message-bubble">네</div>
+            </div>
+        </div>
+
+        <!-- <div class="message-line my-message">
+            <p class="manager-time">오후 12:43</p>
+            <div class="message-area">
+                <div class="message-bubble message-blue"><a href="#" class="mention">@전체</a>
+                    홀 아웃 했습니다. 홀 아웃 했습니다.홀 아웃 했습니다.
+                </div>
+            </div>
+        </div> -->
     </div>
+
+
+    <div id="split-2" class="rnb-wrap">
+        <div class="rnb">
+            <a href="#" class="monitoring-refresh head-info">새로고침</a>
+            <ul class="rnb-btn-wrap">
+                <li>
+                    <button class="rnb-btn btn-msg"></button>
+                    <span class="btn-name">메세지</span>
+                </li>
+                <li>
+                    <button class="rnb-btn btn-cart"></button>
+                    <span class="btn-name">카트정보</span>
+                </li>
+                <li>
+                    <button class="rnb-btn btn-time"></button>
+                    <span class="btn-name">진행시간</span>
+                </li>
+                <li>
+                    <button class="rnb-btn btn-option"></button>
+                    <span class="btn-name">옵션설정</span>
+                </li>
+            </ul>
+            <!-- [dev] 핀 클릭 시 btn-pin에 on클래스가 추가되며
+                 핀이 켜진 상태에서 rnb 패널이 아닌 부분 클릭시 
+                 .rnb-depth2-wrap과 .rnb-depth2-box에 open 클래스가 사라지지 않습니다.(핀 기능: RNB 패널 고정 노출)						
+                 // 핀 기능이 꺼져 있는 경우에는 rnb 패널이 아닌 부분 클릭시 .rnb-depth2-wrap과 .rnb-depth2-box에 open클래스가 사라집니다.
+            -->
+            <button class="btn-pin"></button>
+        </div>
+    
+        <!-- [dev] rnb 메뉴 클릭시 rnb-depth2-wrap에 open 클래스가 추가됩니다 -->
+        
+        <section class="rnb-depth2-wrap">
+            <div class="rnb-depth2-box">
+                <div class="rnb-depth-head">
+                    <strong class="title">메세지</strong>
+                    <button class="btn-close">닫기</button>
+                </div>
+                <div class="rnb-depth-body messageDetailBox">
+                    <div class="message-type-btns" style="display: none;">
+                        <p class="title"><a href="#">멘션 선택하기</a></p>
+                        <div class="messageTypeBox">
+                            <div class="message-type-btn">
+                                <p class="btnTitle">1대상</p>
+                                <div class="cart-radio-wrap">
+                                    <span class="selectBox">
+                                        <p><input type="text" value="@전체" /></p><!-- 2021.11.10 수정 -->
+                                        <ul>
+                                            <li>@전체</li>
+                                            <li>코스</li>
+                                            <li>개별</li>
+                                        </ul>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="message-type-btn">
+                                <p class="btnTitle">전체</p>
+                                <div class="cart-radio-wrap">
+                                    <span class="selectBox disabled">
+                                        <p><input type="text" value="전체" disabled /></p><!-- 2021.11.10 수정 -->
+                                        <ul>
+                                            <li>@라이언</li>
+                                            <li>@어피치</li>
+                                            <li>@네오</li>
+                                            <li>@콘</li>
+                                        </ul>
+                                    </span>
+                                </div>
+                            </div>
+                            <a class="confirm" href="#">선택완료</a>
+                        </div>
+                    </div>
+    
+                    <div class="cart-message-wrap">
+                        <div class="notice-wrap" style="display: none;">
+                            <button class="notice-btn"></button>
+                            <div class="sticky-notice-box">
+                                <div class="notice-text">
+                                    <span class="ic_notice"><img src="../img/icon/rnb/ic_notice.png" alt="공지사항"></span>
+                                    <p class="notice-alert">[공지] 위성뷰 업데이트 안내</p>
+                                    <button class="notice-arrow"><img src="../img/icon/rnb/ic_accordion_arrow.png" alt=""></button>
+                                </div>
+                                <div class="notice-btn-wrap hide">
+                                    <button class="notReopen-btn">다시 열지 않음</button>
+                                    <button class="folding-btn">접어두기</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-message-box">
+                            <div class="message-box-inner">
+                                <div class="message-line manager-message">
+                                    <!-- 상대 메세지 -->
+                                    <div class="profile-img">
+                                        <img src="../img/profile-img.png" alt="프로필 이미지" />
+                                    </div>
+                                    <div class="manager-talk">
+                                        <p class="manager-nickname">카트라이더2</p>
+                                        <div class="message-area">
+                                            <div class="message-bubble message-white">클럽1 습득했습니다. 클럽2 습득했습니다. 클럽3 습득했습니다. 클럽4 습득했습니다.</div>
+                                        </div>
+                                    </div>
+                                    <p class="manager-time">오후 12:43</p>
+                                </div>
+                                <div class="message-line my-message">
+                                    <!-- 나의 메세지 -->
+                                    <p class="manager-time">오후 12:43</p>
+                                    <div class="message-area">
+                                        <div class="message-bubble message-blue"><a href="#" class="mention">@전체</a>
+                                            홀 아웃 했습니다. 홀 아웃 했습니다.홀 아웃 했습니다.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="message-line manager-message">
+                                    <!-- 상대 메세지 -->
+                                    <div class="profile-img">
+                                        <img src="../img/profile-img.png" alt="프로필 이미지" />
+                                    </div>
+                                    <div class="manager-talk">
+                                        <p class="manager-nickname">카트라이더</p>
+                                        <div class="message-area">
+                                            <div class="message-bubble message-white">클럽 습득</div>
+                                        </div>
+                                    </div>
+                                    <p class="manager-time">오후 12:43</p>
+                                </div>
+                                <div class="message-line my-message">
+                                    <!-- 나의 메세지 -->
+                                    <p class="manager-time">오후 12:43</p>
+                                    <div class="message-area">
+                                        <div class="message-bubble message-blue"><a href="#" class="mention">@전체</a>홀 아웃
+                                            했습니다.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="message-line manager-message">
+                                    <!-- 상대 메세지 -->
+                                    <div class="profile-img">
+                                        <img src="../img/profile-img.png" alt="프로필 이미지" />
+                                    </div>
+                                    <div class="manager-talk">
+                                        <p class="manager-nickname">카트라이더</p>
+                                        <div class="message-area">
+                                            <div class="message-bubble message-white">클럽 습득했습니다.<br />클럽 습득했습니다.</div>
+                                        </div>
+                                    </div>
+                                    <p class="manager-time">오후 12:43</p>
+                                </div>
+                                <div class="message-line my-message">
+                                    <!-- 나의 메세지 -->
+                                    <p class="manager-time">오후 12:43</p>
+                                    <div class="message-area">
+                                        <div class="message-bubble message-blue"><a href="#" class="mention">@전체</a>홀 아웃
+                                            했습니다.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="message-line manager-message">
+                                    <!-- 상대 메세지 -->
+                                    <div class="profile-img">
+                                        <img src="../img/profile-img.png" alt="프로필 이미지" />
+                                    </div>
+                                    <div class="manager-talk">
+                                        <p class="manager-nickname">카트라이더</p>
+                                        <div class="message-area">
+                                            <div class="message-bubble message-white">네.</div>
+                                        </div>
+                                    </div>
+                                    <p class="manager-time">오후 12:43</p>
+                                </div>
+                                <div class="message-line my-message">
+                                    <!-- 나의 메세지 -->
+                                    <p class="manager-time"><span>2</span><br />오후 12:43</p>
+                                    <div class="message-area">
+                                        <div class="message-bubble message-blue">네!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="message-line manager-message">
+                                    <!-- 상대 메세지 -->
+                                    <div class="profile-img">
+                                        <img src="../img/profile-img.png" alt="프로필 이미지" />
+                                    </div>
+                                    <div class="manager-talk">
+                                        <p class="manager-nickname">카트라이더</p>
+                                        <div class="message-area">
+                                            <div class="message-bubble message-white">클럽 습득했습니다.</div>
+                                        </div>
+                                    </div>
+                                    <p class="manager-time"><span>2</span><br>오후 12:43</p>
+                                </div>
+                            </div>
+                            <!-- <a href="#" class="btn-bottom"></a> -->
+                        </div>
+                        <div class="message-typing-wrap">
+                            <div class="tag-wrap">
+                                <div class="tag-box mention">
+                                    <div class="select-tag">
+                                        <!-- [dev] 선택된 btn-tag에 on클래스가 추가됩니다 -->
+                                        <button class="btn-tag on">@전체</button>
+                                        <button class="btn-tag">@개별</button>
+                                        <button class="btn-tag">@코스</button>
+                                    </div>
+                                    <!-- [dev] @개별, @코스 버튼 클릭 시 list-tag에 show클래스가 추가됩니다 -->
+                                    <div class="list-tag">
+                                        <ul class="select-list">
+                                            <li>@캐디명1</li>
+                                            <li>@캐디명2</li>
+                                            <li>@캐디명3</li>
+                                            <li>앞홀이 비었으니 진행 협조바랍니다.</li>
+                                            <li>진행 협조 바랍니다.</li>
+                                            <li>전반 시작합니다.</li>
+                                            <li>후반 시작합니다.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tag-box recommend"></div>
+                            </div>
+                            <div class="inner">
+                                <div class="message-wrap">
+                                    <div class="input-message">
+                                        <span class="selectText">@전체</span>
+                                        <span class="messageText" contenteditable="true" placeholder="메시지를 입력해주세요.">메시지를
+                                            입력해주세요.</span>
+                                        <!-- <p class="messageText"><span class="selectText">@전체</span><span class="placeholder" contenteditable="true" placeholder="메시지를 입력해주세요."></span></p> -->
+                                    </div>
+                                    <a href="#" class="message-send-btn"></a>
+                                </div>
+                                <div class="message-function-wrap">
+                                    <!-- [dev] 활성화 된 btn-function에는 active 클래스가 추가되며, tag-wrap에 show클래스가 추가됩니다.  -->
+                                    <button class="btn-function mention"> <span class="icon-box"></span> 멘션</button>
+                                    <button class="btn-function recommend"> <span class="icon-box"></span> 추천</button>
+                                </div>
+                            </div>
+                        </div>								
+                    </div>
+                </div>
+            </div>
+            <div class="rnb-depth2-box">
+                <div class="rnb-depth-head">
+                    <strong class="title">카트 정보</strong>
+                    <button class="btn-close">닫기</button>
+                </div>
+                <div class="rnb-depth-body cartDetailBox">
+                    <div class="member-tbl-wrap">
+                        <div class="member-top">
+                            <div class="member-tbl-head">
+                                <p class="member-tbl-num number-font">15</p>
+                                <p class="member-tbl-ttl">김민우김민우김민우</p>
+                                <p class="member-tbl-time number-font">09:19</p>
+                            </div>
+                            <p class="member-tbl-state">OUT/IN/힐/파인/루트A</p>
+                        </div>								
+
+                        <div class="partner-info">
+                            <!-- 2021.11.15 수정 -->
+                            <p class="partner-info-txt"><span class="proName">김마리프로</span> / <span class="txt-bold">M</span> / 5</p>
+                            <p class="partner-info-txt"><span class="proName">이프로</span> / <span class="txt-bold">F</span> / 10</p>
+                            <p class="partner-info-txt"><span class="proName">송프로</span> / <span class="txt-bold">F</span> / 12</p>
+                            <p class="partner-info-txt"><span class="proName">임프로</span> / <span class="txt-bold">F</span> / 7</p>
+                            <!-- / 2021.11.15 수정 -->
+                        </div>
+                    
+                        <!-- 21.12.09 라인뷰 코스 타임 추가 -->
+                        <div class="hole-time-tbl-wrap row-type">
+                            <div class="hole-time-flex-box">
+                                <div class="hole-time-box">
+                                    <div class="holentime">
+                                        <span class="hole-number">전반시작</span>
+                                        <strong class="hole-time">09:09</strong>
+                                    </div>
+                                    <div class="holentime">
+                                        <span class="hole-number">후반시작</span>
+                                        <strong class="hole-time">11:40</strong>
+                                    </div>
+                                    <div class="holentime">
+                                        <span class="hole-number">추가1 시작</span>
+                                        <strong class="hole-time">11:40</strong>
+                                    </div>
+                                    <div class="holentime">
+                                        <span class="hole-number">진행시간</span>
+                                        <strong class="hole-time">11:40</strong>
+                                    </div>
+                                </div>
+                                <div class="hole-time-box">
+                                    <div class="holentime">
+                                        <span class="hole-number">경과시간</span>
+                                        <strong class="hole-time">09:09</strong>
+                                    </div>
+                                    <div class="holentime">
+                                        <span class="hole-number">경과시간</span>
+                                        <strong class="hole-time">11:40</strong>
+                                    </div>
+                                    <div class="holentime">
+                                        <span class="hole-number">경과시간</span>
+                                        <strong class="hole-time">11:40</strong>
+                                    </div>
+                                    <div class="holentime">
+                                        <span class="hole-number">현재위치</span>
+                                        <strong class="hole-time"><span class="current-place">OCEAN-1</span></strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hole-time-flex-box">
+                                <div class="hole-time-box">
+                                    <div class="holentime">
+                                        <span class="hole-number">추가2 시작</span>
+                                        <strong class="hole-time">09:09</strong>
+                                    </div>
+                                    <div class="holentime">
+                                        <span class="hole-number">추가3 시작</span>
+                                        <strong class="hole-time">11:40</strong>
+                                    </div>
+                                    <div class="holentime">
+                                        <span class="hole-number">&nbsp;</span>
+                                        <strong class="hole-time">&nbsp;</strong>
+                                    </div>
+                                    <div class="holentime">
+                                        <span class="hole-number">&nbsp;</span>
+                                        <strong class="hole-time">&nbsp;</strong>
+                                    </div>
+                                </div>
+                                <div class="hole-time-box">
+                                    <div class="holentime">
+                                        <span class="hole-number">경과시간</span>
+                                        <strong class="hole-time">09:09</strong>
+                                    </div>
+                                    <div class="holentime">
+                                        <span class="hole-number">경과시간</span>
+                                        <strong class="hole-time">11:40</strong>
+                                    </div>
+                                    <div class="holentime">
+                                        <span class="hole-number">&nbsp;</span>
+                                        <strong class="hole-time">&nbsp;</strong>
+                                    </div>
+                                    <div class="holentime">
+                                        <span class="hole-number">&nbsp;</span>
+                                        <strong class="hole-time">&nbsp;</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hole-time wrap">
+                        <div class="holeTime-head">
+                            <p class="hole-time-txt">홀별 진행시간</p>
+                            <!-- <button class="hole-time-wide-view-btn-1"></button> -->
+                        </div>
+                    
+                        <!-- 21.12.07 라인뷰 > “카트 상세 정보” 팝업 홀별 진행 시간 추가 -->
+                        <div class="hole-time-tbl-wrap">
+                            <div class="hole-time-flex-box">
+                                <!--전반-->
+                                <div class="hole-time-box">
+                                    <strong class="hole-time-head">전반</strong>
+                                    <div class="holentime">
+                                        <span class="hole-number">1</span>
+                                        <strong class="hole-time">09:09</strong>
+                                    </div>
+                                    <div class="holentime">
+                                        <span class="hole-number">10</span>
+                                        <strong class="hole-time">11:40</strong>
+                                    </div>
+                                    <div class="holentime">
+                                        <span class="hole-number">-</span>
+                                        <strong class="hole-time">--:--</strong>
+                                    </div>
+                                </div>
+                                <!--후반-->
+                                <div class="hole-time-box">
+                                    <strong class="hole-time-head">후반</strong>
+                                    <div class="holentime">
+                                        <span class="hole-number">1</span>
+                                        <strong class="hole-time">09:09</strong>
+                                    </div>
+                                    <div class="holentime">
+                                        <span class="hole-number">10</span>
+                                        <strong class="hole-time">11:40</strong>
+                                    </div>
+                    
+                                    <div class="holentime">
+                                        <span class="hole-number">10</span>
+                                        <strong class="hole-time">11:40</strong>
+                                    </div>
+                                </div>
+                                <!--추가1-->
+                                <div class="hole-time-box">
+                                    <strong class="hole-time-head">추가1</strong>
+                                    <div class="holentime">
+                                        <span class="hole-number">1</span>
+                                        <strong class="hole-time">09:09</strong>
+                                    </div>
+                                    <div class="holentime">
+                                        <span class="hole-number">10</span>
+                                        <strong class="hole-time">11:40</strong>
+                                    </div>
+                                    <div class="holentime">
+                                        <span class="hole-number">-</span>
+                                        <strong class="hole-time">--:--</strong>
+                                    </div>
+                                </div>
+                                <!--추가2-->
+                                <div class="hole-time-box">
+                                    <strong class="hole-time-head">추가2</strong>
+                                    <div class="holentime">
+                                        <span class="hole-number">1</span>
+                                        <strong class="hole-time">09:09</strong>
+                                    </div>
+                                    <div class="holentime">
+                                        <span class="hole-number">10</span>
+                                        <strong class="hole-time">11:40</strong>
+                                    </div>
+                                    <div class="holentime">
+                                        <span class="hole-number">-</span>
+                                        <strong class="hole-time">--:--</strong>
+                                    </div>
+                                </div>
+                                <!--추가3-->
+                                <div class="hole-time-box">
+                                    <strong class="hole-time-head">추가3</strong>
+                                    <div class="holentime">
+                                        <span class="hole-number">1</span>
+                                        <strong class="hole-time">09:09</strong>
+                                    </div>
+                                    <div class="holentime">
+                                        <span class="hole-number">10</span>
+                                        <strong class="hole-time">11:40</strong>
+                                    </div>
+                                    <div class="holentime">
+                                        <span class="hole-number">-</span>
+                                        <strong class="hole-time">--:--</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rnb-depth2-box">
+                <div class="rnb-depth-head">
+                    <strong class="title">진행 시간</strong>
+                    <button class="btn-close">닫기</button>
+                </div>
+                <div class="rnb-depth-body selectCourse">
+                    <div class="course-head">
+                        코스선택
+                        <div class="cart-radio-wrap">
+                            <div class="course">
+                                <span class="selectBox">
+                                    <p><input type="text" value="선택" /></p><!-- 2021.11.10 수정 -->
+                                    <ul>
+                                        <li>선택</li>
+                                        <li>캐디명</li>
+                                        <li>번호</li>
+                                        <li>시간</li>
+                                    </ul>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-flex-tb-wrap">
+                        <div class="row-head">
+                            <span class="row-item cart">카트</span>
+                            <span class="row-item course">코스</span>
+                            <span class="row-item hole">홀번호</span>
+                            <span class="row-item time">티업시간 <br> (진행시간)</span>
+                        </div>
+                        <div class="tb-body">
+                            <div class="row">
+                                <span class="row-item cart">00</span>
+                                <span class="row-item course">
+                                    <strong>
+                                        <em>OCEANOCEAN</em> 
+                                        <em>VALLEYVALLEY</em>	
+                                    </strong>
+                                    <strong>
+                                        <em>OCEAN</em> 
+                                        <em>VALLEY</em>	
+                                    </strong>
+                                    <strong>
+                                        <em>OCEAN</em> 
+                                    </strong>
+                                </span>
+                                <span class="row-item hole">10</span>
+                                <span class="row-item time">hh:mm <br> (0시간 0분)</span>
+                            </div>
+                            <div class="row">
+                                <span class="row-item cart">00</span>
+                                <span class="row-item course">
+                                    <strong>
+                                        <em>OCEAN</em> 
+                                        <em>VALLEY</em>	
+                                    </strong>
+                                    <strong>
+                                        <em>OCEAN</em> 
+                                    </strong>
+                                </span>
+                                <span class="row-item hole">10</span>
+                                <span class="row-item time">hh:mm <br> (0시간 0분)</span>
+                            </div>
+                            <div class="row">
+                                <span class="row-item cart">00</span>
+                                <span class="row-item course">
+                                    <strong>
+                                        <em>ABC</em> 
+                                        <em>DEFG</em>	
+                                    </strong>
+                                    <strong>
+                                        <em>OCEAN</em> 
+                                    </strong>
+                                </span>
+                                <span class="row-item hole">10</span>
+                                <span class="row-item time">hh:mm <br> (0시간 0분)</span>
+                            </div>
+                            <div class="row">
+                                <span class="row-item cart">00</span>
+                                <span class="row-item course">
+                                    <strong>
+                                        <em>인</em> 
+                                        <em>아아웃</em>	
+                                    </strong>
+                                    <strong>
+                                        <em>루트A</em> 
+                                    </strong>
+                                </span>
+                                <span class="row-item hole">10</span>
+                                <span class="row-item time">hh:mm <br> (0시간 0분)</span>
+                            </div>
+                            <div class="row">
+                                <span class="row-item cart">00</span>
+                                <span class="row-item course">
+                                    <strong>
+                                        <em>코스명이일곱자</em> 
+                                        <em>아웃웃</em>	
+                                    </strong>
+                                    <strong>
+                                        <em>루트A루트A루트A루트A</em> 
+                                    </strong>
+                                </span>
+                                <span class="row-item hole">10</span>
+                                <span class="row-item time">hh:mm <br> (0시간 0분)</span>
+                            </div>
+                            <div class="row">
+                                <span class="row-item cart">00</span>
+                                <span class="row-item course">
+                                    <strong>
+                                        <em>코스명이일곱자</em> 
+                                        <em>아웃웃</em>	
+                                    </strong>
+                                    <strong>
+                                        <em>코스명이일곱자</em> 
+                                        <em>아웃웃</em>	
+                                    </strong>
+                                    <strong>
+                                        <em>루트A루트A루트A루트A</em> 
+                                    </strong>
+                                </span>
+                                <span class="row-item hole">10</span>
+                                <span class="row-item time">hh:mm <br> (0시간 0분)</span>
+                            </div>
+
+
+                            <div class="row">
+                                <span class="row-item cart">00</span>
+                                <span class="row-item course">
+                                    <em>코스명이일곱자</em> 
+                                    <em>아웃웃</em>	
+                                    <em>코스명이일곱자</em> 
+                                    <em>아웃웃</em>												
+                                </span>
+                                <span class="row-item hole">10</span>
+                                <span class="row-item time">hh:mm <br> (0시간 0분)</span>
+                            </div>
+
+                            
+                            
+                        </div>
+                    </div>											
+                </div>
+            </div>
+            <div class="rnb-depth2-box">
+                <div class="rnb-depth-head">
+                    <strong class="title">사용자 옵션 설정</strong>
+                    <button class="btn-close">닫기</button>
+                </div>
+                <div class="rnb-depth-body">
+                    <div class="userOption">
+                        <div class="setting-box">
+                            <div class="setting-name">
+                                <strong>홀 별 Par 정보</strong>
+                                <p>홀 별 파 정보 표기</p>
+                            </div>
+                            <div class="setting-btn">
+                                <input type="checkbox" id="switch1" /><label for="switch1"></label>
+                            </div>
+                        </div>
+                        <div class="setting-box">
+                            <div class="setting-name">
+                                <strong>확대/축소 버튼</strong>
+                                <p>확대/축소 버튼 사용 여부</p>
+                            </div>
+                            <div class="setting-btn">
+                                <input type="checkbox" id="switch2" /><label for="switch2"></label>
+                            </div>
+                        </div>
+                        <div class="setting-box">
+                            <div class="setting-name">
+                                <strong>메시지/카트정보 팝업</strong>
+                                <p>메시지/카트정보 팝업창으로 보기</p>
+                            </div>
+                            <div class="setting-btn">
+                                <input type="checkbox" id="switch3" /><label for="switch3"></label>
+                            </div>
+                        </div>
+                        <div class="setting-box">
+                            <div class="setting-name">
+                                <strong>위성뷰/대기카트</strong>
+                                <p>대기카트 지도 노출 여부</p>
+                            </div>
+                            <div class="setting-btn">
+                                <input type="checkbox" id="switch4" /><label for="switch4"></label>
+                            </div>
+                        </div>
+                        <div class="setting-box fontControl">
+                            <div class="setting-name">
+                                <strong class="mb-00">패널창 글자 크기 조절</strong>
+                            </div>
+                            <div class="cart-radio-wrap fontControl-wrap">
+                                <span class="selectBox">
+                                    <p><input type="text" value="크게" /></p>
+                                    <ul>
+                                        <!-- [dev]
+                                            크게 // 현재 사이즈 
+                                            중간 // 크게 시 사이즈에서 -2px
+                                            작게 // 크게 시 사이즈에서 -4px
+                                        -->
+                                        <li class="fzBig">크게</li>
+                                        <li class="fzMid">중간</li>
+                                        <li class="fzSmall">작게</li>
+                                    </ul>
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="./js/rnb.js"></script>
 </body>
 </html>
