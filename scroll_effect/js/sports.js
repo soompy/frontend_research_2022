@@ -17,14 +17,14 @@ tl.from($sections, { x: '300%', autoAlpha: 0, duration: 2, ease: "none", stagger
 
 
 gsap.registerPlugin(ScrollTrigger);
-
+// var $toptextBox = document.querySelectorAll(".textBox");
 const tl2 = gsap.timeline({
     scrollTrigger: {
         trigger: '.digitalTransformation',
         start: 'top top',
         end: 'bottom top',
         pin: true,
-        markers: true,
+        // markers: true,
         pinSpacing: false,
         scrub: true,
     }
@@ -32,11 +32,35 @@ const tl2 = gsap.timeline({
 tl2.to('.circle', {
     scale: 1
 })
-    .to('img', {
-        scale: 0.5,        
-        left: -50,
-    }, 0)
-    .to(['.circle', 'img'], {
-        opacity: 0
-        // transform: translateY(-50%)
-    })
+
+.to('img', {
+    scale: 0.5,        
+    translateX: -300,
+}, 0)
+.to(['.circle', 'img'], {
+    opacity: 0        
+})
+
+
+const tl3 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.digitalTransformation',
+        start: 'top top',
+        end: 'bottom top',
+        pin: true,
+        // markers: true,
+        pinSpacing: false,
+        scrub: true,
+    }
+})
+tl3.to('.textBox', {
+    display: none
+})
+
+.to('img', {
+    display: block
+}, 0)
+.to(['.circle', 'img'], {
+    display: none    
+})
+
