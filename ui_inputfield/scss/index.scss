@@ -1,263 +1,44 @@
-
-@import "variables";
-
-// fonts 
-@import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
-@font-face {
-    font-family: "Kakao-Lt";
-    font-style: normal;
-    font-weight: 300;
-    src: url("/fonts/Kakao-Lt.eot");
-    src: url("/fonts/Kakao-Lt.eot?#iefix") format("embedded-opentype"), url("/fonts/Kakao-Lt.woff") format("woff"), url("/fonts/Kakao-Lt.woff2") format("woff2");
-}
-  
-@font-face {
-    font-family: "Kakao-Rg";
-    font-style: normal;
-    font-weight: 400;
-    src: url("/fonts/Kakao-Rg.eot");
-    src: url("/fonts/Kakao-Rg.eot?#iefix") format("embedded-opentype"), url("/fonts/Kakao-Rg.woff") format("woff"), url("/fonts/Kakao-Rg.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Kakao-Bd";
-    font-style: normal;
-    font-weight: 700;
-    src: url("/fonts/Kakao-Bd.eot");
-    src: url("/fonts/Kakao-Bd.eot?#iefix") format("embedded-opentype"), url("/fonts/Kakao-Bd.woff") format("woff"), url("/fonts/Kakao-Bd.woff2") format("woff2");
-}
-
-.cp_menu {
-  overflow-x: auto;
+.info-input-wrap {
+  position: relative;
   display: flex;
   align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: #fff;
-  padding: 10px 10px 0;
-  border-bottom: 1px solid #cccccc;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 20px;
   box-sizing: border-box;
-  .cp_item {
-    flex-shrink: 0;
-    width: auto;
-    text-align: center;
-    background: rgba(255, 220, 0, 0.25);
-    font-size: 16px;
-    color: $color-text-medium-black;
-    border-radius: 7px;
-    box-shadow: 0 7px 0px $color-primary-yellow;
-    display: inline-block;
-    transition: all .2s;
-    position: relative;
+ .input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  flex-shrink: 0;
+  margin-right: 10px;
+  font-size: 14px;
+  .input-txt-label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;        
+    position: absolute;
+    left: 0;
     top: 0;
-    cursor: pointer;
-    margin: 0 10px 17px 0;
-    a {
-        display: block;
-        width: 100%;
-        height: 100%;
-        box-sizing: border-box;
-        padding: 16px 22px;
-    }
-    &:hover {
-        font-weight: bold;
-        color: $color-text-dark-black;
-    }
-    &:active {
-        top: 3px;
-        box-shadow: 0 2px 0px $color-primary-yellow;
-        transition: all .2s;
-    }
-  }
-  &.fixed {
-      position: fixed;
-  }
-}
-
-
-.contents {
-    position: relative;
     width: 100%;
+    height: 100%;    
+    padding: 0 14%;
+    color: #333;
     box-sizing: border-box;
-    padding: 10px;
-    .container {
-        position: relative;
-        width: 100%;
-        h3 {
-            margin: 50px 0 10px;
-        }
-    }
-    .component-box {
-        position: relative;
-        > div {
-            margin-bottom: 17px;
-        }
-    }
-}
-
-// 탭
-.tab-menu-wrap {
-    position: relative;
-    width: 100%;
-    font-family: "Spoqa Han Sans Neo", "sans-serif";
-    background: #ffffff;
-    .scrolling-tab-area {
-      overflow-x: scroll;
-      position: relative;
-      width: 100%;
-      .tab {
-        width: max-content;
-        display: inline-flex;
-        align-items: center;
-        white-space: normal;
-        padding: 0;
-        .tab-item {
-          position: relative;
-          flex-shrink: 0;
-          margin: 10px 13px;
-          box-sizing: border-box;
-          span {
-            display: block;
-            font-size: 15px;
-          }
-          &:after {
-            display: none;
-          }
-          &.active_tab {
-            &:after {
-              position: absolute;
-              left: 0;
-              bottom: -10px;
-              display: block;
-              clear: both;
-              content: "";
-              width: 100%;
-              height: 2px;
-              background: #000000;
-            }
-          }
-        }
-      }
-      &::-webkit-scrollbar {
-        display: none;
-      }
-    }
-    &.type2 {
-      font-family: "Spoqa Han Sans Neo", "sans-serif";
-      .scrolling-tab-area {
-        .tab {
-          width: 100%;
-          .tab-item {
-            flex: 1;
-            flex-shrink: 0;
-            margin: 10px 0;
-            text-align: center;
-            padding: 0 10px;
-          }
-        }
-      }
-    }
   }
-
-// 칩
-.chip-wrap {
-    display: flex;
-    align-items: center;
-    .chip {
-        font-size: 15px;
-        font-family: "Kakao-Rg";
-        font-weight: 400;
-        text-align: center;
-        letter-spacing: -0.5px;
-        background: #F2F2F2;
-        border: 1px solid #E5E5E5;
-        border-radius: 3px;
-        box-sizing: border-box;
-        color: #00000099;
-        padding: 4px 6px;
-        &.green {
-            background: #05AA33;
-            border: 1px solid #0B9230;
-            border-radius: 0;
-            color: $color-white;
-        }
-        &.grey {
-            background: $color-primary-grey;
-            border: 1px solid #525252;
-            border-radius: 0;
-            color: $color-white;
-        }
-    }
-}
-
-// 버튼
-.gb-btn-wrap {
-    position: relative;
-    display: flex;
-    align-items: center;
+  .input-txt {    
+    position: relative;    
     width: 100%;
-    > button {
-        flex: 1;
-        height: 60px;
-        font-size: 18px;
-        font-family: "Kakao-Rg";
-        font-weight: 400;
-        text-align: center;
-        letter-spacing: -0.5px;
-    }
-    .btn-primary-yellow {
-        background: $color-primary-yellow;
-        &.disabled {
-            color: #0000004d;            
-        }
-    }
-    .btn-primary-grey {
-        background: $color-primary-grey;
-        color: $color-white;
-    }
-}
-
-// 스위치 버튼
-.switch-btn {
-    margin-left: auto;
-    input[type="checkbox"] {
-      height: 0;
-      width: 0;
-      visibility: hidden;
-    }
-    label {
-      position: relative;
-      cursor: pointer;
-      text-indent: -9999px;
-      width: 50px;
-      height: 28px;
-      background: #474747;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      display: block;
-      border-radius: 20px;
-      &:after {
-        content: "";
-        position: absolute;
-        top: 3px;
-        left: 3px;
-        width: 22px;
-        height: 22px;
-        background: #ffffff;
-        // box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.1);
-        border-radius: 50%;
-        transition: 0.3s;
-      }
-    }
-    input:checked + label {
-      background: #ffdc00;
-    }
-    input:checked + label:after {
-      left: calc(100% - 3px);
-      transform: translateX(-100%);
-    }
-
-    label:active:after {
-      width: 30px;
-    }
+    height: 30px;
+    padding: 0 14%;
+    border: 1px solid #ccc;   
+    background: transparent;
+    box-sizing: border-box;
   }
+  .input-span {
+    display: block;
+    padding-left: 8px;
+  }
+ } 
+}

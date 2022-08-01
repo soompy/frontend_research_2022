@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/apple.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="info-input-wrap">
+        <div class="input-box info-input-box info-input-year">
+            <label class="input-txt-label">년</label>
+            <input id="input_box" type="text" class="input-txt input-num" />
+            <span class="input-span">년</span>
+        </div>
+        <div class="input-box info-input-box info-input-month">
+            <label class="input-txt-label">월</label>
+            <input type="text" class="input-txt input-num" />
+            <span class="input-span">월</span>
+        </div>
+        <div class="input-box info-input-box info-input-date">
+            <label class="input-txt-label">일</label>
+            <input type="text" class="input-txt input-num" />
+            <span class="input-span">일</span>
+        </div>
+    </div>
+
+    <script>
+        
+        document.getElementById('input_box').focus(); // 포커스 활성
+        document.getElementById('input_box').blur(); // 포커스 해제
+
+        // 모바일 가상 키보드 제어 속성 : inputmode
+        /*
+            가상키보드 비활성 inputmode="none"
+            텍스트, 숫자, 숫자, 전화 번호, 검색, 이메일, 주소
+        */
+
+    </script>
+</body>
+</html>

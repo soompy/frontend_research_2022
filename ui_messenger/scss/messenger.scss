@@ -718,20 +718,19 @@
         width: fit-content;
         max-width: 60%;
         padding: 12px;
-        background: #c9defc;
-        border-radius: 20px;
-        border: 1px solid #8cb1e9;
+        background: #ffffff;
+        border-radius: 24px;
+        border: 1px solid #d7d9dd;
         &:after {
             position: absolute;
-            right: -5px;
-            top: -1px;
-        //    z-index: -1;
-            width: 36px;
-            height: 28px;
+            right: -3px;
+            top: -4px;
+            width: 27px;
+            height: 26px;
             display: block;
             clear: both;
             content: '';
-            background: url("../img/tail.png") center center no-repeat;
+            background: url("../img/cut-bubble-tail-blue.png") center center no-repeat;
             background-size: contain;
         }
    }
