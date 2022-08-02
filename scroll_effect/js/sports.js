@@ -37,7 +37,7 @@ tl2.to('.imgBox', {
     translateX: -300,
 }, 0)
 .to(['.imgBox', 'img'], {
-    opacity: 0        
+    // opacity: 0        
 })
 
 
@@ -58,22 +58,22 @@ ScrollTrigger.create({
     markers: true,
     onEnter: () => gsap.to(text, {
       y: 0,
-      opacity: 1,
+      opacity: 0,
       stagger: 0.2,
     }),
     onLeave: () => gsap.to(text, {
       y: -50,
-      opacity: 0,
+      opacity: 1,
       stagger: 0.2,
     }),
     onEnterBack: () => gsap.to(text, {
       y: 0,
-      opacity: 1,
+      opacity: 0,
       stagger: -0.2,
     }),
     onLeaveBack: () => gsap.to(text, {
       y: 50,
-      opacity: 0,
+      opacity: 1,
       stagger: -0.2,
     }),
   });
