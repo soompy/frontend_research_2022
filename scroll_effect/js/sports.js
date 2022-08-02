@@ -17,19 +17,18 @@ tl.from($sections, { x: '300%', autoAlpha: 0, duration: 2, ease: "none", stagger
 
 
 gsap.registerPlugin(ScrollTrigger);
-// var $toptextBox = document.querySelectorAll(".textBox");
 const tl2 = gsap.timeline({
     scrollTrigger: {
-        trigger: '.digitalTransformation',
+        trigger: '.inner-cat',
         start: 'top top',
-        end: 'bottom top',
+        end: 'bottom center',
         pin: true,
         // markers: true,
         pinSpacing: false,
         scrub: true,
     }
 })
-tl2.to('.circle', {
+tl2.to('.imgBox', {
     scale: 1
 })
 
@@ -37,30 +36,44 @@ tl2.to('.circle', {
     scale: 0.5,        
     translateX: -300,
 }, 0)
-.to(['.circle', 'img'], {
+.to(['.imgBox', 'img'], {
     opacity: 0        
 })
 
 
-const tl3 = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.digitalTransformation',
-        start: 'top top',
-        end: 'bottom top',
-        pin: true,
-        // markers: true,
-        pinSpacing: false,
-        scrub: true,
-    }
-})
-tl3.to('.textBox', {
-    display: none
-})
+const text = document.querySelector('.textBox');
 
-.to('img', {
-    display: block
-}, 0)
-.to(['.circle', 'img'], {
-    display: none    
-})
+gsap.set(text, {
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    ease: 'power3.out',
+    overwrite: 'auto',
+});
 
+ScrollTrigger.create({
+    trigger: '.text-target',
+    start: 'top 60%',
+    end: 'bottom 30%',
+    markers: true,
+    onEnter: () => gsap.to(text, {
+      y: 0,
+      opacity: 1,
+      stagger: 0.2,
+    }),
+    onLeave: () => gsap.to(text, {
+      y: -50,
+      opacity: 0,
+      stagger: 0.2,
+    }),
+    onEnterBack: () => gsap.to(text, {
+      y: 0,
+      opacity: 1,
+      stagger: -0.2,
+    }),
+    onLeaveBack: () => gsap.to(text, {
+      y: 50,
+      opacity: 0,
+      stagger: -0.2,
+    }),
+  });

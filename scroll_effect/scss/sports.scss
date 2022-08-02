@@ -39,32 +39,46 @@
 
 #section2 {
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    width: 100%;
+    width: 100%;    
     height: 100vh;
     background: skyblue;
-
-    .circle {        
-        position: relative;
-        width: auto;
+    .inner-cat {
+        display: flex;
+        align-items: center;
+        width: 100%;
         height: 100%;
+    }
+    .imgBox {        
+        position: relative;
+        width: 100%;
+        height: auto;
         display: flex;
         align-items: center;
         justify-content: center;
-        flex: 1;
-
+        
         img {
             display: block;
             width: 100%;
             height: auto;
+            border-radius: 30px;
         }
     }
 
-    .textBox {  
-        display: none;      
-        flex: 1;
-        // width: 50%;
+    .text-target {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%); 
+        width: 0;
+        visibility: hidden;
+    }
+    .textBox {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%); 
+        max-width: 50%;
+        transition: all .2s;
     }
 }
 
@@ -76,112 +90,6 @@
 #section4 {
     background: cornflowerblue;
 }
-
-// .digitalTransformation {
-//     display: -webkit-flex;
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     width: 100%;
-//     height: 100%;
-//     padding: 0 54px;
-//     box-sizing: border-box;
-
-//     .imgBox {
-//         position: fixed;
-//         transform: scale(1);
-//         transition: transform 1s ease-in-out;
-
-//         display: block;
-//         width: auto;
-//         -webkit-width: auto;
-//         min-width: auto;
-//         -webkit-min-width: auto;
-//         height: 98%;
-//         margin: auto;
-//         transform-origin: center center;
-//         transition: all 2s ease-in-out;
-
-//         img {
-//             transform-origin: center center;
-//             border-radius: 30px;
-//         }
-//     }
-
-//     @media not all and (min-resolution:.001dpcm) {
-//         @supports (-webkit-appearance:none) {
-//             .imgBox {
-//                 flex: 2;
-//             }
-//         }
-//     }
-
-//     .m_imgBox {
-//         display: none;
-//     }
-
-//     .textBox {
-//         flex-shrink: 0;
-//         width: 0;
-//         // opacity: 0;
-//         word-break: keep-all;
-
-//         h3 {
-//             visibility: hidden;
-//             width: 100%;
-//             min-height: 128px;
-//             font-size: 48px;
-//             line-height: 64px;
-//             font-weight: bold;
-//             margin-bottom: 30px;
-//             animation: up 1.4s linear;
-//             animation-delay: 1s;
-//             animation-fill-mode: forwards;
-//         }
-
-//         p {
-//             visibility: hidden;
-//             width: 100%;
-//             min-height: 90px;
-//             font-size: 16px;
-//             line-height: 30px;
-//             animation: up 1.4s linear;
-//             animation-delay: 1.5s;
-//             animation-fill-mode: forwards;
-//         }
-//     }
-
-//     &.inview {
-//         width: 1520px;
-//         margin: auto;
-//         padding: 0;
-
-//         .imgBox {
-//             height: 372px;
-//             padding: 0;
-//         }
-
-//         @media not all and (min-resolution:.001dpcm) {
-//             @supports (-webkit-appearance:none) {
-//                 .imgBox {
-//                     flex: 1;
-//                     height: auto;
-//                 }
-//             }
-//         }
-
-//         .textBox {
-//             &.on {
-//                 animation-fill-mode: forwards;
-//                 animation-name: openText, slideOpacity;
-//                 animation-delay: 0s, 1.6s;
-//                 animation-duration: 1s, 2s;
-//                 animation-timing-function: ease-in, ease-in-out;
-//                 padding-left: 93px;
-//             }
-//         }
-//     }
-// }
 
 @keyframes up {
     from {
